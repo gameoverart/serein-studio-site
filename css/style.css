@@ -129,7 +129,8 @@ body.lang-ja .t-en {
   font-size: 0.85rem;
 }
 
-/* 上層連結 & nav parent 共用樣式 */
+/* 上層連結 & nav parent 共用 */
+
 .main-nav a,
 .nav-parent {
   color: var(--color-silver-white);
@@ -140,12 +141,10 @@ body.lang-ja .t-en {
   transition: 0.2s ease;
 }
 
-/* 上層 a */
 .nav-link {
   white-space: nowrap;
 }
 
-/* nav parent（有子選單的標題） */
 .nav-parent {
   display: inline-flex;
   align-items: center;
@@ -162,18 +161,21 @@ body.lang-ja .t-en {
 }
 
 /* hover 效果 */
+
 .main-nav a:hover,
 .nav-parent:hover {
   opacity: 1;
   background: rgba(154, 179, 200, 0.14);
 }
 
-/* 有子選單的外框 */
+/* 有子選單的 nav-item */
+
 .nav-item {
   position: relative;
 }
 
-/* 子選單（桌機版） */
+/* 子選單（桌機） */
+
 .nav-submenu {
   position: absolute;
   top: 100%;
@@ -192,7 +194,6 @@ body.lang-ja .t-en {
   z-index: 60;
 }
 
-/* 桌機上 hover 就打開 */
 .nav-item:hover .nav-submenu {
   opacity: 1;
   pointer-events: auto;
@@ -211,7 +212,6 @@ body.lang-ja .t-en {
   background: rgba(154, 179, 200, 0.16);
   opacity: 1;
 }
-
 
 /* 語言切換 */
 
@@ -246,14 +246,14 @@ body.lang-ja .t-en {
   opacity: 1;
 }
 
-/* Mobile nav toggle */
+/* 漢堡選單 */
 
 .nav-toggle {
   background: none;
   border: none;
   cursor: pointer;
   padding: 0.25rem;
-  display: none; /* 在小螢幕才出現，下面 media 會開啟 */
+  display: none;
 }
 
 .nav-toggle span {
@@ -266,7 +266,7 @@ body.lang-ja .t-en {
   transition: 0.23s ease;
 }
 
-/* 漢堡 → X 動畫 */
+/* 漢堡 → X */
 
 .nav-toggle.active span:nth-child(1) {
   transform: translateY(6px) rotate(45deg);
@@ -462,13 +462,7 @@ body.lang-ja .t-en {
   color: var(--color-muted-text);
 }
 
-.section-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.4fr);
-  gap: 2.5rem;
-}
-
-/* Cards */
+/* 卡片與網格 */
 
 .cards-grid {
   display: grid;
@@ -503,56 +497,181 @@ body.lang-ja .t-en {
   color: var(--color-muted-text);
 }
 
-/* Projects & portfolio */
+/* ===== Portfolio ===== */
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+@media (max-width: 1200px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.portfolio-card {
+  background: var(--color-card-bg);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border-soft);
+  box-shadow: var(--shadow-soft);
+  padding: 1.2rem 1.1rem 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.portfolio-thumb {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border-soft);
+  background: radial-gradient(circle at 10% 0%, rgba(154, 179, 200, 0.25), rgba(7, 9, 16, 0.95));
+  margin-bottom: 0.5rem;
+  overflow: hidden;
+}
+
+.portfolio-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.portfolio-title {
+  margin: 0 0 0.25rem;
+  font-size: 1rem;
+}
+
+.portfolio-body {
+  flex: 1;
+}
+
+.portfolio-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-bottom: 0.4rem;
+}
+
+.pill-tag {
+  font-size: 0.72rem;
+  padding: 0.14rem 0.55rem;
+  border-radius: 999px;
+  border: 1px solid rgba(196, 182, 217, 0.7);
+  color: var(--color-soft-lavender);
+  background: rgba(8, 10, 18, 0.92);
+}
+
+.portfolio-desc {
+  font-size: 0.9rem;
+  color: var(--color-muted-text);
+}
+
+/* ===== Projects ===== */
+
+.projects-highlight-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.6rem;
+}
+
+.project-highlight {
+  background: radial-gradient(circle at 5% 0%, rgba(154, 179, 200, 0.24), rgba(7, 8, 16, 0.96));
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(196, 182, 217, 0.5);
+  padding: 1.5rem 1.4rem 1.4rem;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.4);
+}
+
+.project-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  margin-bottom: 0.6rem;
+}
+
+.project-title {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.project-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.2rem;
+  font-size: 0.8rem;
+  color: var(--color-muted-text);
+  margin-bottom: 0.7rem;
+}
+
+.project-body p {
+  font-size: 0.9rem;
+  color: var(--color-silver-white);
+  margin-bottom: 0.55rem;
+}
+
+.project-list {
+  margin: 0.2rem 0 0;
+  padding-left: 1.1rem;
+  font-size: 0.86rem;
+  color: var(--color-muted-text);
+}
+
+/* smaller project cards */
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1.75rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.4rem;
+}
+
+@media (max-width: 960px) {
+  .projects-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
 }
 
 .project-card {
   background: var(--color-card-bg);
-  border-radius: var(--radius-lg);
-  padding: 1.5rem 1.4rem;
+  border-radius: var(--radius-md);
   border: 1px solid var(--color-border-soft);
+  padding: 1.2rem 1.1rem;
   box-shadow: var(--shadow-soft);
-}
-
-.project-tag {
-  display: inline-block;
-  padding: 0.16rem 0.6rem;
-  border-radius: var(--radius-full);
-  border: 1px solid rgba(196, 182, 217, 0.6);
-  font-size: 0.7rem;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--color-soft-lavender);
-  margin-bottom: 0.5rem;
 }
 
 .project-card h3 {
   margin-top: 0;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.35rem;
+  font-size: 1.02rem;
 }
 
-.project-card p {
-  font-size: 0.9rem;
-  color: var(--color-silver-white);
-}
-
-.project-note {
-  margin-top: 0.7rem;
-  font-size: 0.85rem;
-  color: var(--color-muted-text);
-}
 
 /* Partners */
 
 .partners-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1.5rem;
+}
+
+@media (max-width: 960px) {
+  .partners-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
 }
 
 .partner-card {
@@ -560,7 +679,109 @@ body.lang-ja .t-en {
   border-radius: var(--radius-md);
   padding: 1.4rem 1.4rem;
   border: 1px solid var(--color-border-soft);
+  box-shadow: var(--shadow-soft);
 }
+
+.partner-name {
+  margin: 0 0 0.4rem;
+  font-size: 1.02rem;
+}
+
+.partner-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin-bottom: 0.6rem;
+}
+
+.partner-tag {
+  font-size: 0.75rem;
+  padding: 0.16rem 0.5rem;
+  border-radius: 999px;
+  border: 1px solid rgba(196, 182, 217, 0.6);
+  color: var(--color-soft-lavender);
+  background: rgba(12, 15, 24, 0.8);
+}
+
+.partner-desc {
+  font-size: 0.9rem;
+  color: var(--color-silver-white);
+  opacity: 0.9;
+  margin-bottom: 0.6rem;
+}
+
+.partner-list {
+  margin: 0.4rem 0 0.4rem;
+  padding-left: 1.1rem;
+  font-size: 0.86rem;
+  color: var(--color-muted-text);
+}
+
+.partner-links {
+  font-size: 0.82rem;
+  color: var(--color-muted-text);
+  margin: 0.4rem 0 0;
+}
+
+.partner-links a {
+  color: var(--color-soft-lavender);
+  text-decoration: none;
+}
+
+.partner-links a:hover {
+  text-decoration: underline;
+}
+
+/* 類別區塊＋上方分隔線 */
+
+.partner-category {
+  margin-bottom: 3rem;
+}
+
+.partner-category-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.8rem;
+}
+
+.partner-category-header::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, rgba(196, 182, 217, 0.6), rgba(196, 182, 217, 0));
+  opacity: 0.7;
+}
+
+.partner-category-label {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.18rem 0.7rem;
+  border-radius: 999px;
+  border: 1px solid rgba(196, 182, 217, 0.8);
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-soft-lavender);
+  background: rgba(8, 10, 18, 0.9);
+}
+
+.partner-category-note {
+  font-size: 0.88rem;
+  color: var(--color-muted-text);
+  margin-top: 0;
+  margin-bottom: 1.2rem;
+}
+
+/* 說明段落收斂一點寬度 */
+
+.partner-intro {
+  max-width: 760px;
+  margin: 0 auto;
+  font-size: 0.9rem;
+  color: var(--color-muted-text);
+}
+
 
 /* Team */
 
@@ -582,94 +803,348 @@ body.lang-ja .t-en {
   color: var(--color-soft-lavender);
 }
 
-/* Workflow */
-
-.workflow-grid {
+/* Section grid（如果之前沒加可以一起用在 about / team 等頁） */
+.section-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.6fr);
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+@media (max-width: 960px) {
+  .section-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* Team page extras */
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1.5rem;
 }
 
-.workflow-step {
+@media (max-width: 960px) {
+  .team-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.team-card {
   background: var(--color-card-bg);
   border-radius: var(--radius-md);
-  padding: 1.2rem 1.1rem;
+  padding: 1.5rem 1.4rem;
   border: 1px solid var(--color-border-soft);
+  box-shadow: var(--shadow-soft);
 }
 
-.step-index {
-  display: inline-block;
-  font-size: 0.8rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
+.team-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.25rem;
+  font-size: 1.05rem;
+}
+
+.team-role {
+  font-size: 0.85rem;
   color: var(--color-soft-lavender);
-  margin-bottom: 0.3rem;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
 }
 
-/* Contact */
-
-.contact-section {
-  background: radial-gradient(circle at top left, rgba(154, 179, 200, 0.25), rgba(7, 9, 16, 1));
-}
-
-.contact-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
-  gap: 2.5rem;
-}
-
-.contact-info {
-  list-style: none;
-  padding: 0;
-  margin: 1rem 0 0;
-  font-size: 0.92rem;
+.member-exp-list {
+  margin: 0.7rem 0 0;
+  padding-left: 1.1rem;
+  font-size: 0.88rem;
   color: var(--color-muted-text);
 }
 
-.contact-info a {
+/* 預設只顯示前兩條，exp-more 先隱藏 */
+.member-exp-list .exp-more {
+  display: none;
+}
+
+/* 卡片展開時顯示更多條目 */
+.team-card.expanded .member-exp-list .exp-more {
+  display: list-item;
+}
+
+/* 顯示更多／收起按鈕 */
+.member-toggle {
+  margin-top: 0.6rem;
+  font-size: 0.78rem;
+  padding: 0.28rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid rgba(196, 182, 217, 0.7);
+  background: transparent;
+  color: var(--color-soft-lavender);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  opacity: 0.85;
+  transition: 0.2s ease;
+}
+
+.member-toggle:hover {
+  opacity: 1;
+  background: rgba(196, 182, 217, 0.08);
+}
+
+.member-toggle .label-less {
+  display: none;
+}
+
+.team-card.expanded .member-toggle .label-more {
+  display: none;
+}
+
+.team-card.expanded .member-toggle .label-less {
+  display: inline-flex;
+}
+
+/* 成員頭像＋標題區 */
+.member-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 0.9rem;
+}
+
+.member-photo {
+  flex: 0 0 140px;          /* 桌機大約 140px 寬 */
+  max-width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid var(--color-border-soft);
+  background: radial-gradient(circle at 30% 10%, rgba(154, 179, 200, 0.2), rgba(7, 9, 16, 0.9));
+}
+
+.member-photo img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.member-title h3 {
+  margin-top: 0;
+  margin-bottom: 0.15rem;
+}
+
+.member-title p {
+  margin-top: 0.25rem;
+}
+
+/* 圖檔本身建議輸出 500x500，但畫面會依這裡縮放 */
+@media (max-width: 960px) {
+  .member-header {
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 640px) {
+  .member-header {
+    flex-direction: column;
+  }
+
+  .member-photo {
+    flex: 0 0 auto;
+    width: 160px;          /* 手機版大約 160px */
+    max-width: 70%;
+  }
+}
+
+/* Workflow layout */
+
+.workflow-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+@media (max-width: 960px) {
+  .workflow-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.workflow-step {
+  position: relative;
+  background: var(--color-card-bg);
+  border-radius: var(--radius-md);
+  padding: 1.4rem 1.3rem 1.3rem;
+  border: 1px solid var(--color-border-soft);
+  box-shadow: var(--shadow-soft);
+}
+
+.workflow-step h3 {
+  margin-top: 0.1rem;
+  margin-bottom: 0.4rem;
+  font-size: 1.02rem;
+}
+
+.workflow-step p {
+  font-size: 0.9rem;
+  color: var(--color-muted-text);
+}
+
+.step-index {
+  position: absolute;
+  top: 0.9rem;
+  right: 1.1rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-soft-lavender);
+  opacity: 0.7;
+}
+
+
+/* Contact layout */
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1.1fr);
+  gap: 2.5rem;
+  align-items: flex-start;
+}
+
+@media (max-width: 960px) {
+  .contact-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.contact-info h3 {
+  margin-top: 0;
+  margin-bottom: 0.6rem;
+}
+
+.contact-info p {
+  font-size: 0.9rem;
+  color: var(--color-muted-text);
+}
+
+.contact-hints {
+  margin: 0.6rem 0 1.2rem;
+  padding-left: 1.1rem;
+  font-size: 0.86rem;
+  color: var(--color-muted-text);
+}
+
+.contact-direct {
+  margin-top: 1.1rem;
+  padding: 0.9rem 1rem;
+  border-radius: var(--radius-md);
+  border: 1px dashed var(--color-border-soft);
+  background: rgba(12, 15, 24, 0.8);
+}
+
+.contact-direct h4 {
+  margin-top: 0;
+  margin-bottom: 0.35rem;
+  font-size: 0.95rem;
+}
+
+.contact-line {
+  font-size: 0.86rem;
+}
+
+.contact-line a {
   color: var(--color-soft-lavender);
   text-decoration: none;
 }
 
-.contact-form {
-  background: rgba(8, 10, 18, 0.9);
-  border-radius: var(--radius-lg);
-  padding: 1.7rem 1.4rem;
-  border: 1px solid rgba(196, 182, 217, 0.4);
-  box-shadow: var(--shadow-soft);
+.contact-line a:hover {
+  text-decoration: underline;
 }
 
-.contact-form label {
-  display: block;
-  font-size: 0.85rem;
+.contact-note {
+  margin-top: 1rem;
+  font-size: 0.86rem;
+  color: var(--color-muted-text);
+}
+
+/* Contact form */
+
+.contact-form-wrapper h3 {
+  margin-top: 0;
   margin-bottom: 0.7rem;
 }
 
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  margin-top: 0.3rem;
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  background: rgba(4, 6, 12, 0.9);
-  color: var(--color-silver-white);
-  padding: 0.55rem 0.7rem;
-  font-family: inherit;
-  font-size: 0.9rem;
+.contact-form {
+  background: var(--color-card-bg);
+  border-radius: var(--radius-md);
+  padding: 1.3rem 1.2rem 1.2rem;
+  border: 1px solid var(--color-border-soft);
+  box-shadow: var(--shadow-soft);
 }
 
-.contact-form input:focus,
-.contact-form textarea:focus {
+.form-row {
+  display: block;
+  margin-bottom: 0.8rem;
+}
+
+.form-row-2col {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.8rem;
+}
+
+@media (max-width: 640px) {
+  .form-row-2col {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.form-field label {
+  display: block;
+  font-size: 0.82rem;
+  margin-bottom: 0.25rem;
+  color: var(--color-soft-lavender);
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  width: 100%;
+  font-size: 0.9rem;
+  padding: 0.5rem 0.6rem;
+  border-radius: 0.45rem;
+  border: 1px solid var(--color-border-soft);
+  background: rgba(5, 7, 13, 0.9);
+  color: var(--color-silver-white);
   outline: none;
-  border-color: rgba(196, 182, 217, 0.8);
-  box-shadow: 0 0 0 1px rgba(196, 182, 217, 0.6);
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+  color: rgba(200, 200, 220, 0.55);
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  border-color: rgba(196, 182, 217, 0.9);
+  box-shadow: 0 0 0 1px rgba(196, 182, 217, 0.3);
 }
 
 .form-note {
-  margin-top: 0.7rem;
-  font-size: 0.75rem;
+  font-size: 0.78rem;
   color: var(--color-muted-text);
+  margin: 0.4rem 0 0.8rem;
 }
+
+/* 按鈕全寬版本 */
+
+.btn.full-width {
+  display: inline-flex;
+  width: 100%;
+  justify-content: center;
+}
+
 
 /* Footer */
 
@@ -709,7 +1184,6 @@ body.lang-ja .t-en {
     margin-bottom: 2rem;
   }
 
-  .section-grid,
   .contact-grid {
     grid-template-columns: minmax(0, 1fr);
   }
@@ -734,11 +1208,11 @@ body.lang-ja .t-en {
     border-bottom: 1px solid rgba(255, 255, 255, 0.06);
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.2s ease;
+    transition: 0.2s ease;
   }
 
   .main-nav.open {
-    max-height: 360px;
+    max-height: 420px;
   }
 
   .lang-switch {
@@ -749,14 +1223,8 @@ body.lang-ja .t-en {
     padding-top: 4rem;
   }
 
-  .cards-grid {
-    grid-template-columns: minmax(0, 1fr);
-  }
-
-  .projects-grid {
-    grid-template-columns: minmax(0, 1fr);
-  }
-
+  .cards-grid,
+  .projects-grid,
   .workflow-grid {
     grid-template-columns: minmax(0, 1fr);
   }
@@ -766,33 +1234,11 @@ body.lang-ja .t-en {
     gap: 0.3rem;
     text-align: center;
   }
-}
-@media (max-width: 780px) {
-  .nav-toggle {
-    display: block;
-  }
 
-  .main-nav {
-    position: absolute;
-    inset: 64px 0 auto 0;
-    background: rgba(7, 9, 16, 0.98);
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0.75rem 1.5rem 1rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.2s ease;
-  }
-
-  .main-nav.open {
-    max-height: 420px; /* 可以依實際內容再調 */
-  }
-
-  /* 手機版子選單：不要浮空，改成縮排顯示 */
+  /* 手機版：子選單改成縮排顯示 */
   .nav-submenu {
     position: static;
-    background: transparent;
+    background: none;
     border: none;
     box-shadow: none;
     padding: 0 0 0.3rem;
@@ -809,10 +1255,8 @@ body.lang-ja .t-en {
 
   .nav-sub-link {
     padding-left: 1.4rem;
-    border-radius: 999px;
   }
 
-  /* caret 旋轉 */
   .nav-item.open .nav-caret {
     transform: rotate(180deg);
   }

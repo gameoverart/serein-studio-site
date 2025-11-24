@@ -1,4 +1,4 @@
-// 手機版選單開關＋漢堡動畫
+// 漢堡選單開關
 const navToggle = document.getElementById("navToggle");
 const mainNav = document.getElementById("mainNav");
 
@@ -8,7 +8,7 @@ if (navToggle && mainNav) {
     navToggle.classList.toggle("active");
   });
 
-  // 點選導覽列連結後自動收合（手機時）
+  // 點連結後自動收合（手機）
   mainNav.querySelectorAll("a").forEach((link) => {
     link.addEventListener("click", () => {
       mainNav.classList.remove("open");
@@ -17,13 +17,35 @@ if (navToggle && mainNav) {
   });
 }
 
+// 子選單開關（主要給手機用）
+const navSubParents = document.querySelectorAll(".nav-item.has-sub .nav-parent");
+
+navSubParents.forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+
+    const item = btn.closest(".nav-item");
+    const isOpen = item.classList.contains("open");
+
+    // 一次只開一個
+    document.querySelectorAll(".nav-item.has-sub.open").forEach((i) => {
+      i.classList.remove("open");
+    });
+
+    if (!isOpen) {
+      item.classList.add("open");
+    }
+  });
+});
+
 // footer 年份
 const yearSpan = document.getElementById("year");
 if (yearSpan) {
   yearSpan.textContent = new Date().getFullYear();
 }
 
-// 語言切換：中文 / 英文 / 日文
+// 語言切換：中 / EN / 日
 const langSwitch = document.getElementById("langSwitch");
 const bodyEl = document.body;
 
@@ -50,16 +72,14 @@ function applyLang(lang) {
   }
 }
 
-// 初始語言（如果 localStorage 有紀錄就用）
+// 初始語言
 let initialLang = "zh";
 try {
   const saved = localStorage.getItem("serein-lang");
   if (saved === "en" || saved === "zh" || saved === "ja") {
     initialLang = saved;
   }
-} catch (e) {
-  // ignore
-}
+} catch (e) {}
 applyLang(initialLang);
 
 if (langSwitch) {
@@ -70,3 +90,13 @@ if (langSwitch) {
     });
   });
 }
+// Team page：成員經歷顯示更多 / 收起
+const memberToggles = document.querySelectorAll(".member-toggle");
+
+memberToggles.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const card = btn.closest(".team-card");
+    if (!card) return;
+    card.classList.toggle("expanded");
+  });
+});
