@@ -1261,3 +1261,55 @@ body.lang-ja .t-en {
     transform: rotate(180deg);
   }
 }
+/* ===== 修正手機版首頁 Hero 排版 ===== */
+@media (max-width: 768px) {
+
+  /* 整個 hero 區塊縮小一點 */
+  .hero {
+    padding-top: 72px;   /* 給上方固定導覽列一點空間 */
+    padding-bottom: 32px;
+  }
+
+  /* 文字 + 圖片改成直向排列、置中 */
+  .hero-inner,
+  .hero-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.2rem;
+  }
+
+  /* 那顆蛋／圓形光球的外層容器 */
+  .hero-visual {
+    width: 75vw;          /* 以螢幕寬度為主 */
+    max-width: 260px;     /* 不要太大顆 XD */
+    margin: 0 auto 1.4rem;
+  }
+
+  /* 如果你有用到下列 class，就一起限制大小 */
+  .hero-orb,
+  .hero-orb-inner,
+  .hero-visual img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;  /* 保持正圓／正蛋形 */
+  }
+
+  /* 手機版標題跟內文也稍微縮一下 */
+  .hero-text h1,
+  .hero-title {
+    font-size: 1.6rem;
+    line-height: 1.25;
+  }
+
+  .hero-text p,
+  .hero-subtitle {
+    font-size: 0.95rem;
+  }
+}
+
+/* 避免出現橫向捲動條（有些陰影或固定寬度會撐出來） */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
