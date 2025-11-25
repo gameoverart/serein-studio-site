@@ -1,5 +1,3 @@
-// 建議整段直接換成這版
-
 document.addEventListener("DOMContentLoaded", () => {
   // 漢堡選單開關
   const navToggle = document.getElementById("navToggle");
@@ -7,12 +5,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (navToggle && mainNav) {
     navToggle.addEventListener("click", () => {
-      const isOpen = mainNav.classList.toggle("open"); // 控制 .main-nav.open
-      navToggle.classList.toggle("active", isOpen);    // 控制漢堡動畫（對應 CSS 的 .nav-toggle.active）
-      document.body.classList.toggle("nav-open", isOpen); // 鎖背景捲動用
+      const isOpen = mainNav.classList.toggle("open");
+      navToggle.classList.toggle("active", isOpen);
+      document.body.classList.toggle("nav-open", isOpen);
     });
 
-    // 點連結後自動收合（只在手機時執行）
+    // 手機：點任何連結就自動收合
     mainNav.querySelectorAll("a").forEach((link) => {
       link.addEventListener("click", () => {
         if (window.innerWidth <= 768) {
@@ -24,14 +22,13 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // 子選單開關（主要給手機用）
+  // 子選單開關（只在手機啟用）
   const navSubParents = document.querySelectorAll(
     ".nav-item.has-sub .nav-parent"
   );
 
   navSubParents.forEach((btn) => {
     btn.addEventListener("click", (e) => {
-      // 桌機版就讓它當作普通 hover / CSS 控制，不要擋
       if (window.innerWidth > 768) return;
 
       e.preventDefault();
@@ -40,7 +37,6 @@ document.addEventListener("DOMContentLoaded", () => {
       const item = btn.closest(".nav-item");
       const isOpen = item.classList.contains("open");
 
-      // 一次只開一個子選單
       document
         .querySelectorAll(".nav-item.has-sub.open")
         .forEach((i) => i.classList.remove("open"));
@@ -51,6 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
 
 // footer 年份
 const yearSpan = document.getElementById("year");

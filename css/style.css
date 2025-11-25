@@ -27,8 +27,14 @@ html {
 
 body {
   margin: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", "Noto Sans JP", sans-serif;
-  background: radial-gradient(circle at top, #20263a 0, #070911 55%, #040308 100%);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Noto Sans TC", "Noto Sans JP", sans-serif;
+  background: radial-gradient(
+    circle at top,
+    #20263a 0,
+    #070911 55%,
+    #040308 100%
+  );
   color: var(--color-silver-white);
   line-height: 1.6;
 }
@@ -72,7 +78,11 @@ body.lang-ja .t-en {
   top: 0;
   z-index: 50;
   backdrop-filter: blur(20px);
-  background: linear-gradient(to bottom, rgba(6, 8, 14, 0.9), rgba(6, 8, 14, 0.6));
+  background: linear-gradient(
+    to bottom,
+    rgba(6, 8, 14, 0.9),
+    rgba(6, 8, 14, 0.6)
+  );
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
@@ -94,7 +104,12 @@ body.lang-ja .t-en {
   width: 32px;
   height: 32px;
   border-radius: var(--radius-full);
-  background: radial-gradient(circle at 30% 20%, #f4f6f8, #c4b6d9 35%, #9ab3c8 80%);
+  background: radial-gradient(
+    circle at 30% 20%,
+    #f4f6f8,
+    #c4b6d9 35%,
+    #9ab3c8 80%
+  );
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -291,9 +306,16 @@ body.lang-ja .t-en {
 .hero-gradient {
   position: absolute;
   inset: -40%;
-  background:
-    radial-gradient(circle at top left, rgba(196, 182, 217, 0.35) 0, transparent 60%),
-    radial-gradient(circle at top right, rgba(154, 179, 200, 0.35) 0, transparent 60%);
+  background: radial-gradient(
+      circle at top left,
+      rgba(196, 182, 217, 0.35) 0,
+      transparent 60%
+    ),
+    radial-gradient(
+      circle at top right,
+      rgba(154, 179, 200, 0.35) 0,
+      transparent 60%
+    );
   opacity: 0.9;
   pointer-events: none;
 }
@@ -301,7 +323,11 @@ body.lang-ja .t-en {
 .hero-glow {
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 50% 0, rgba(244, 246, 248, 0.14), transparent 58%);
+  background: radial-gradient(
+    circle at 50% 0,
+    rgba(244, 246, 248, 0.14),
+    transparent 58%
+  );
   mix-blend-mode: screen;
   pointer-events: none;
 }
@@ -403,8 +429,16 @@ body.lang-ja .t-en {
   width: 260px;
   height: 260px;
   border-radius: 50%;
-  background: radial-gradient(circle at 30% 10%, rgba(244, 246, 248, 0.4), transparent 55%),
-              radial-gradient(circle at 70% 90%, rgba(154, 179, 200, 0.5), transparent 55%);
+  background: radial-gradient(
+      circle at 30% 10%,
+      rgba(244, 246, 248, 0.4),
+      transparent 55%
+    ),
+    radial-gradient(
+      circle at 70% 90%,
+      rgba(154, 179, 200, 0.5),
+      transparent 55%
+    );
   box-shadow: 0 26px 60px rgba(0, 0, 0, 0.55);
   display: flex;
   align-items: center;
@@ -415,7 +449,12 @@ body.lang-ja .t-en {
   width: 120px;
   height: 160px;
   border-radius: 60% 60% 55% 55%;
-  background: radial-gradient(circle at 30% 20%, #f4f6f8, #c4b6d9 40%, #9ab3c8 90%);
+  background: radial-gradient(
+    circle at 30% 20%,
+    #f4f6f8,
+    #c4b6d9 40%,
+    #9ab3c8 90%
+  );
   box-shadow: 0 18px 45px rgba(0, 0, 0, 0.45);
 }
 
@@ -440,7 +479,11 @@ body.lang-ja .t-en {
 }
 
 .section-alt {
-  background: radial-gradient(circle at top, rgba(22, 27, 43, 0.95), rgba(7, 9, 16, 1));
+  background: radial-gradient(
+    circle at top,
+    rgba(22, 27, 43, 0.95),
+    rgba(7, 9, 16, 1)
+  );
 }
 
 .section-heading {
@@ -533,7 +576,11 @@ body.lang-ja .t-en {
   aspect-ratio: 16 / 9;
   border-radius: var(--radius-md);
   border: 1px solid var(--color-border-soft);
-  background: radial-gradient(circle at 10% 0%, rgba(154, 179, 200, 0.25), rgba(7, 9, 16, 0.95));
+  background: radial-gradient(
+    circle at 10% 0%,
+    rgba(154, 179, 200, 0.25),
+    rgba(7, 9, 16, 0.95)
+  );
   margin-bottom: 0.5rem;
   overflow: hidden;
 }
@@ -584,7 +631,11 @@ body.lang-ja .t-en {
 }
 
 .project-highlight {
-  background: radial-gradient(circle at 5% 0%, rgba(154, 179, 200, 0.24), rgba(7, 8, 16, 0.96));
+  background: radial-gradient(
+    circle at 5% 0%,
+    rgba(154, 179, 200, 0.24),
+    rgba(7, 8, 16, 0.96)
+  );
   border-radius: var(--radius-lg);
   border: 1px solid rgba(196, 182, 217, 0.5);
   padding: 1.5rem 1.4rem 1.4rem;
@@ -658,7 +709,6 @@ body.lang-ja .t-en {
   margin-bottom: 0.35rem;
   font-size: 1.02rem;
 }
-
 
 /* Partners */
 
@@ -749,7 +799,11 @@ body.lang-ja .t-en {
   content: "";
   flex: 1;
   height: 1px;
-  background: linear-gradient(to right, rgba(196, 182, 217, 0.6), rgba(196, 182, 217, 0));
+  background: linear-gradient(
+    to right,
+    rgba(196, 182, 217, 0.6),
+    rgba(196, 182, 217, 0)
+  );
   opacity: 0.7;
 }
 
@@ -782,7 +836,6 @@ body.lang-ja .t-en {
   color: var(--color-muted-text);
 }
 
-
 /* Team */
 
 .team-grid {
@@ -803,7 +856,8 @@ body.lang-ja .t-en {
   color: var(--color-soft-lavender);
 }
 
-/* Section grid（如果之前沒加可以一起用在 about / team 等頁） */
+/* Section grid */
+
 .section-grid {
   display: grid;
   grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.6fr);
@@ -912,13 +966,17 @@ body.lang-ja .t-en {
 }
 
 .member-photo {
-  flex: 0 0 140px;          /* 桌機大約 140px 寬 */
+  flex: 0 0 140px;
   max-width: 100%;
   aspect-ratio: 1 / 1;
   border-radius: 18px;
   overflow: hidden;
   border: 1px solid var(--color-border-soft);
-  background: radial-gradient(circle at 30% 10%, rgba(154, 179, 200, 0.2), rgba(7, 9, 16, 0.9));
+  background: radial-gradient(
+    circle at 30% 10%,
+    rgba(154, 179, 200, 0.2),
+    rgba(7, 9, 16, 0.9)
+  );
 }
 
 .member-photo img {
@@ -951,7 +1009,7 @@ body.lang-ja .t-en {
 
   .member-photo {
     flex: 0 0 auto;
-    width: 160px;          /* 手機版大約 160px */
+    width: 160px;
     max-width: 70%;
   }
 }
@@ -1000,7 +1058,6 @@ body.lang-ja .t-en {
   color: var(--color-soft-lavender);
   opacity: 0.7;
 }
-
 
 /* Contact layout */
 
@@ -1145,7 +1202,6 @@ body.lang-ja .t-en {
   justify-content: center;
 }
 
-
 /* Footer */
 
 .site-footer {
@@ -1193,26 +1249,10 @@ body.lang-ja .t-en {
   }
 }
 
+/* 手機 generic layout（不含 nav/menu） */
 @media (max-width: 780px) {
   .nav-toggle {
     display: block;
-  }
-
-  .main-nav {
-    position: absolute;
-    inset: 64px 0 auto 0;
-    background: rgba(7, 9, 16, 0.98);
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0.75rem 1.5rem 1rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-    max-height: 0;
-    overflow: hidden;
-    transition: 0.2s ease;
-  }
-
-  .main-nav.open {
-    max-height: 420px;
   }
 
   .lang-switch {
@@ -1234,129 +1274,128 @@ body.lang-ja .t-en {
     gap: 0.3rem;
     text-align: center;
   }
-
-  /* 手機版：子選單改成縮排顯示 */
-  .nav-submenu {
-    position: static;
-    background: none;
-    border: none;
-    box-shadow: none;
-    padding: 0 0 0.3rem;
-    margin-top: 0.1rem;
-    opacity: 1;
-    pointer-events: auto;
-    transform: none;
-    display: none;
-  }
-
-  .nav-item.open .nav-submenu {
-    display: block;
-  }
-
-  .nav-sub-link {
-    padding-left: 1.4rem;
-  }
-
-  .nav-item.open .nav-caret {
-    transform: rotate(180deg);
-  }
 }
+
 /* ===== 修正手機版首頁 Hero 排版 ===== */
 @media (max-width: 768px) {
-
   /* 整個 hero 區塊縮小一點 */
-  .hero {
-    padding-top: 72px;   /* 給上方固定導覽列一點空間 */
-    padding-bottom: 32px;
+  .hero-section {
+    padding-top: 4.5rem;
+    padding-bottom: 3rem;
   }
 
-  /* 文字 + 圖片改成直向排列、置中 */
-  .hero-inner,
   .hero-content {
-    flex-direction: column;
-    align-items: center;
     text-align: center;
-    gap: 1.2rem;
+    justify-items: center;
   }
 
-  /* 那顆蛋／圓形光球的外層容器 */
   .hero-visual {
-    width: 75vw;          /* 以螢幕寬度為主 */
-    max-width: 260px;     /* 不要太大顆 XD */
+    width: 75vw;
+    max-width: 260px;
     margin: 0 auto 1.4rem;
   }
 
-  /* 如果你有用到下列 class，就一起限制大小 */
-  .hero-orb,
-  .hero-orb-inner,
-  .hero-visual img {
-    width: 100%;
+  .hero-orbit {
+    width: 75vw;
+    max-width: 240px;
     height: auto;
-    aspect-ratio: 1 / 1;  /* 保持正圓／正蛋形 */
+    aspect-ratio: 1 / 1;
   }
 
-  /* 手機版標題跟內文也稍微縮一下 */
-  .hero-text h1,
-  .hero-title {
-    font-size: 1.6rem;
+  .hero-text h1 {
+    font-size: 1.9rem;
     line-height: 1.25;
   }
 
-  .hero-text p,
-  .hero-subtitle {
+  .hero-lead {
     font-size: 0.95rem;
   }
 }
 
 /* 避免出現橫向捲動條（有些陰影或固定寬度會撐出來） */
-html, body {
+html,
+body {
   max-width: 100%;
   overflow-x: hidden;
 }
 
-/* ===== 手機版漢堡選單：顯示 / 隱藏修正 ===== */
+/* ===== 手機版漢堡選單完整修正（覆蓋舊設定） ===== */
 @media (max-width: 768px) {
+  /* Header 裡面的排版微調一下 */
+  .nav-container {
+    align-items: center;
+    gap: 0.5rem;
+  }
 
-  /* 先把原本橫向導覽蓋掉，改成 overlay 式選單 */
+  /* 預設主選單「完全不顯示」，不佔空間 */
   .main-nav {
     position: fixed;
-    top: 64px;              /* 大概是 header 高度，可依實際再微調 56~72px */
+    top: 64px; /* header 高度 */
     left: 0;
     right: 0;
     bottom: 0;
     background: rgba(3, 5, 12, 0.98);
-    display: none;          /* 預設完全不顯示，也不佔空間 */
+    display: none;
     flex-direction: column;
     padding: 1rem 1.25rem 2rem;
-    gap: 0.25rem;
+    gap: 0;
     overflow-y: auto;
     z-index: 90;
+    max-height: none;
   }
 
-  /* 打開漢堡選單時才顯示 */
-  .main-nav.open,
-  .main-nav.is-open {
+  /* 有 .open 的時候才顯示成下拉選單 */
+  .main-nav.open {
+    display: flex;
+    max-height: none;
+  }
+
+  /* 每一行主選單項目都佔滿寬度 */
+  .main-nav > .nav-link,
+  .main-nav > .nav-item {
+    width: 100%;
+  }
+
+  /* 主選單按鈕／連結長得像一條條列表 */
+  .main-nav .nav-link,
+  .main-nav .nav-parent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    font-size: 0.98rem;
+  }
+
+  /* 子選單預設收起來 */
+  .nav-item.has-sub .nav-submenu {
+    display: none;
+    flex-direction: column;
+    padding-left: 0.9rem;
+    margin: 0.25rem 0 0.4rem;
+    border-left: 1px solid rgba(255, 255, 255, 0.12);
+    opacity: 1;
+    pointer-events: auto;
+    position: static;
+    background: none;
+    border-radius: 0;
+    box-shadow: none;
+    transform: none;
+  }
+
+  /* 有 .open 的 nav-item 才會展開子選單 */
+  .nav-item.has-sub.open .nav-submenu {
     display: flex;
   }
 
-  /* 關掉橫向排版的影響（避免卡在上方） */
-  .nav-container {
-    align-items: center;
+  .nav-submenu .nav-sub-link {
+    padding: 0.45rem 0;
+    border-bottom: none;
+    font-size: 0.9rem;
+    opacity: 0.9;
   }
 
-  .nav-link,
-  .nav-item.has-sub > .nav-parent {
-    padding: 0.6rem 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-  }
-
-  .nav-submenu {
-    padding-left: 0.75rem;
-    border-left: 1px solid rgba(255, 255, 255, 0.08);
-    margin-bottom: 0.35rem;
-  }
-
-  /* 打開選單時鎖定背景捲動 */
+  /* 開啟選單時鎖住背景滾動（配合 JS 的 body.nav-open） */
   body.nav-open {
     overflow: hidden;
   }
