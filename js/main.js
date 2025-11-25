@@ -1,41 +1,54 @@
-// 漢堡選單開關
-const navToggle = document.getElementById("navToggle");
-const mainNav = document.getElementById("mainNav");
+// 建議整段直接換成這版
 
-if (navToggle && mainNav) {
-  navToggle.addEventListener("click", () => {
-    mainNav.classList.toggle("open");
-    navToggle.classList.toggle("active");
-  });
+document.addEventListener("DOMContentLoaded", () => {
+  // 漢堡選單開關
+  const navToggle = document.getElementById("navToggle");
+  const mainNav = document.getElementById("mainNav");
 
-  // 點連結後自動收合（手機）
-  mainNav.querySelectorAll("a").forEach((link) => {
-    link.addEventListener("click", () => {
-      mainNav.classList.remove("open");
-      navToggle.classList.remove("active");
-    });
-  });
-}
-
-// 子選單開關（主要給手機用）
-const navSubParents = document.querySelectorAll(".nav-item.has-sub .nav-parent");
-
-navSubParents.forEach((btn) => {
-  btn.addEventListener("click", (e) => {
-    e.preventDefault();
-    e.stopPropagation();
-
-    const item = btn.closest(".nav-item");
-    const isOpen = item.classList.contains("open");
-
-    // 一次只開一個
-    document.querySelectorAll(".nav-item.has-sub.open").forEach((i) => {
-      i.classList.remove("open");
+  if (navToggle && mainNav) {
+    navToggle.addEventListener("click", () => {
+      const isOpen = mainNav.classList.toggle("open"); // 控制 .main-nav.open
+      navToggle.classList.toggle("active", isOpen);    // 控制漢堡動畫（對應 CSS 的 .nav-toggle.active）
+      document.body.classList.toggle("nav-open", isOpen); // 鎖背景捲動用
     });
 
-    if (!isOpen) {
-      item.classList.add("open");
-    }
+    // 點連結後自動收合（只在手機時執行）
+    mainNav.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        if (window.innerWidth <= 768) {
+          mainNav.classList.remove("open");
+          navToggle.classList.remove("active");
+          document.body.classList.remove("nav-open");
+        }
+      });
+    });
+  }
+
+  // 子選單開關（主要給手機用）
+  const navSubParents = document.querySelectorAll(
+    ".nav-item.has-sub .nav-parent"
+  );
+
+  navSubParents.forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      // 桌機版就讓它當作普通 hover / CSS 控制，不要擋
+      if (window.innerWidth > 768) return;
+
+      e.preventDefault();
+      e.stopPropagation();
+
+      const item = btn.closest(".nav-item");
+      const isOpen = item.classList.contains("open");
+
+      // 一次只開一個子選單
+      document
+        .querySelectorAll(".nav-item.has-sub.open")
+        .forEach((i) => i.classList.remove("open"));
+
+      if (!isOpen) {
+        item.classList.add("open");
+      }
+    });
   });
 });
 
