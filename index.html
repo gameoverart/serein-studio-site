@@ -1,65 +1,67 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Serein Studio 瑟然工作室｜首頁</title>
-  <meta name="description" content="Serein Studio 瑟然工作室｜靜謐中的靈感流動。文化轉譯、設計、影像與創意企劃。">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, viewport-fit=cover"
+  />
+  <title>Serein Studio 瑟然工作室｜靜謐中的靈感流動</title>
+
+  <!-- 這裡改成你圖片實際路徑與檔名 -->
+  <link rel="icon" href="images/工作室LOGO.png" />
+
+  <!-- 重點：改成 css/style.css -->
   <link rel="stylesheet" href="css/style.css" />
-  <link rel="icon" href="favicon.ico" />
 </head>
 <body class="lang-zh">
-
-  <!-- 頂部導覽列（所有頁面都一樣） -->
+  <!-- ===== Header / 全站導覽 ===== -->
   <header class="site-header">
     <div class="container nav-container">
-      <div class="logo">
-        <span class="logo-mark">S</span>
+      <!-- Logo -->
+      <a href="index.html" class="logo">
+        <div class="logo-mark">S</div>
         <div class="logo-text">
-          <span class="logo-en">Serein Studio</span>
-          <span class="logo-zh">瑟然工作室</span>
+          <span class="logo-en">SEREIN STUDIO</span>
+          <span class="logo-zh t-zh">瑟然工作室</span>
+          <span class="logo-zh t-en">Serein Studio</span>
+          <span class="logo-zh t-ja">セレインスタジオ</span>
         </div>
-      </div>
+      </a>
 
-      <!-- 主選單：分組＋子選單 -->
-      <nav class="main-nav" id="mainNav">
-        <!-- 首頁 -->
-        <a href="index.html" class="nav-link">
+      <!-- 主選單 -->
+      <nav id="mainNav" class="main-nav">
+        <a class="nav-link" href="index.html">
           <span class="t-zh">首頁</span>
           <span class="t-en">Home</span>
           <span class="t-ja">ホーム</span>
         </a>
 
-        <!-- 關於工作室：關於瑟然 / 成員 / 合作夥伴 -->
+        <!-- Studio -->
         <div class="nav-item has-sub">
-          <button type="button" class="nav-parent">
+          <button class="nav-parent" type="button">
             <span class="t-zh">關於工作室</span>
-            <span class="t-en">About Studio</span>
+            <span class="t-en">Studio</span>
             <span class="t-ja">スタジオについて</span>
             <span class="nav-caret">▾</span>
           </button>
           <div class="nav-submenu">
             <a href="about.html" class="nav-sub-link">
-              <span class="t-zh">關於瑟然</span>
-              <span class="t-en">About Serein</span>
-              <span class="t-ja">瑟然について</span>
+              <span class="t-zh">工作室簡介</span>
+              <span class="t-en">Studio Overview</span>
+              <span class="t-ja">スタジオ紹介</span>
             </a>
             <a href="team.html" class="nav-sub-link">
-              <span class="t-zh">工作室成員</span>
+              <span class="t-zh">核心成員</span>
               <span class="t-en">Team</span>
               <span class="t-ja">メンバー</span>
-            </a>
-            <a href="partners.html" class="nav-sub-link">
-              <span class="t-zh">合作夥伴</span>
-              <span class="t-en">Partners</span>
-              <span class="t-ja">パートナー</span>
             </a>
           </div>
         </div>
 
-        <!-- 服務內容：服務總覽 / 作品集 / 工作流程 -->
+        <!-- Services -->
         <div class="nav-item has-sub">
-          <button type="button" class="nav-parent">
+          <button class="nav-parent" type="button">
             <span class="t-zh">服務內容</span>
             <span class="t-en">Services</span>
             <span class="t-ja">サービス</span>
@@ -68,13 +70,8 @@
           <div class="nav-submenu">
             <a href="services.html" class="nav-sub-link">
               <span class="t-zh">服務總覽</span>
-              <span class="t-en">Overview</span>
+              <span class="t-en">Service Overview</span>
               <span class="t-ja">サービス一覧</span>
-            </a>
-            <a href="portfolio.html" class="nav-sub-link">
-              <span class="t-zh">作品集</span>
-              <span class="t-en">Portfolio</span>
-              <span class="t-ja">ポートフォリオ</span>
             </a>
             <a href="workflow.html" class="nav-sub-link">
               <span class="t-zh">工作流程</span>
@@ -84,124 +81,399 @@
           </div>
         </div>
 
-        <!-- 專案與計畫（單頁） -->
-        <a href="projects.html" class="nav-link">
-          <span class="t-zh">專案與計畫</span>
-          <span class="t-en">Projects</span>
-          <span class="t-ja">プロジェクト</span>
+        <!-- Works -->
+        <div class="nav-item has-sub">
+          <button class="nav-parent" type="button">
+            <span class="t-zh">作品與專案</span>
+            <span class="t-en">Works</span>
+            <span class="t-ja">実績</span>
+            <span class="nav-caret">▾</span>
+          </button>
+          <div class="nav-submenu">
+            <a href="portfolio.html" class="nav-sub-link">
+              <span class="t-zh">作品集</span>
+              <span class="t-en">Portfolio</span>
+              <span class="t-ja">ポートフォリオ</span>
+            </a>
+            <a href="projects.html" class="nav-sub-link">
+              <span class="t-zh">專案與計畫</span>
+              <span class="t-en">Projects</span>
+              <span class="t-ja">プロジェクト</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Partners -->
+        <a class="nav-link" href="partners.html">
+          <span class="t-zh">合作夥伴</span>
+          <span class="t-en">Partners</span>
+          <span class="t-ja">パートナー</span>
         </a>
 
-        <!-- 聯絡我們（單頁） -->
-        <a href="contact.html" class="nav-link">
+        <!-- Contact -->
+        <a class="nav-link" href="contact.html">
           <span class="t-zh">聯絡我們</span>
           <span class="t-en">Contact</span>
           <span class="t-ja">お問い合わせ</span>
         </a>
       </nav>
 
-      <!-- 三語切換 -->
-      <div class="lang-switch" id="langSwitch">
-        <button class="lang-btn active" data-lang="zh">中</button>
+      <!-- 語言切換 -->
+      <div id="langSwitch" class="lang-switch">
+        <button class="lang-btn" data-lang="zh">中</button>
         <button class="lang-btn" data-lang="en">EN</button>
         <button class="lang-btn" data-lang="ja">日</button>
       </div>
 
-      <!-- 漢堡按鈕（手機版） -->
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-        <span></span><span></span><span></span>
+      <!-- 漢堡選單按鈕（手機） -->
+      <button
+        id="navToggle"
+        class="nav-toggle"
+        type="button"
+        aria-label="Toggle navigation"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
       </button>
     </div>
   </header>
 
-  <!-- 首頁主要內容（可以沿用你之前的 hero） -->
   <main>
-    <section id="hero" class="hero-section">
+    <!-- ===== Hero ===== -->
+    <section class="hero-section">
       <div class="hero-gradient"></div>
       <div class="hero-glow"></div>
+
       <div class="container hero-content">
         <div class="hero-text">
           <p class="hero-tag">
-            <span class="t-zh">靜中生創 · Serein Studio</span>
-            <span class="t-en">Create in Calm · Serein Studio</span>
-            <span class="t-ja">静けさから生まれる創造 · Serein Studio</span>
+            <span class="t-zh">Creative Studio · Visual Story</span>
+            <span class="t-en">Creative Studio · Visual Story</span>
+            <span class="t-ja">クリエイティブスタジオ · ビジュアルストーリー</span>
           </p>
+
           <h1>
-            Serein Studio
-            <span>瑟然工作室</span>
+            <span class="t-zh">靜謐中的靈感流動</span>
+            <span class="t-en">The flow of inspiration in serenity</span>
+            <span class="t-ja">静けさの中で流れるインスピレーション</span>
           </h1>
+
           <p class="hero-lead">
             <span class="t-zh">
-              靜謐中的靈感流動。<br>
-              結合文化轉譯、設計與創新實作，<br>
-              讓研究、地方與創意在同一個畫面相遇。
+              瑟然工作室專注於角色視覺、VTuber 與品牌設計，以及帶有文化氣息的創意專案。
+              氣氛可以很安靜，但畫面與故事會慢慢發光，替你把想像整理成一個完整的世界。
             </span>
             <span class="t-en">
-              A gentle stream of ideas in quiet. <br>
-              Blending cultural translation, design and creative practice, <br>
-              we let research, local stories and imagination meet in one frame.
+              Serein Studio focuses on character visuals, VTuber branding, and
+              culture-inspired creative projects. Calm on the surface, with ideas
+              quietly weaving into a clear, memorable world for your audience.
             </span>
             <span class="t-ja">
-              静かな時間の中で、インスピレーションはそっと流れ出す。<br>
-              文化の翻訳、デザイン、実践的なクリエイションを組み合わせ、<br>
-              研究・地域・創造が同じ画面で出会う場をつくります。
+              セレインスタジオは、キャラクターデザイン、VTuber ブランディング、
+              そして文化や物語性のあるクリエイティブ案件を中心に展開。
+              穏やかな空気の中で、あなたのイメージをじっくりと一つの世界観へと組み立てていきます。
             </span>
           </p>
+
           <div class="hero-actions">
-            <a href="services.html" class="btn primary">
-              <span class="t-zh">了解服務內容</span>
-              <span class="t-en">Explore Services</span>
-              <span class="t-ja">サービスを見る</span>
+            <a href="portfolio.html" class="btn primary">
+              <span class="t-zh">查看作品</span>
+              <span class="t-en">View portfolio</span>
+              <span class="t-ja">作品を見る</span>
             </a>
-            <a href="projects.html" class="btn ghost">
-              <span class="t-zh">查看專案與提案</span>
-              <span class="t-en">View Projects</span>
-              <span class="t-ja">プロジェクト一覧</span>
+            <a href="contact.html" class="btn ghost">
+              <span class="t-zh">討論合作</span>
+              <span class="t-en">Start a project</span>
+              <span class="t-ja">相談する</span>
             </a>
           </div>
         </div>
 
         <div class="hero-visual">
           <div class="hero-orbit">
-            <div class="hero-drop"></div>
             <div class="hero-orbit-ring"></div>
+            <div class="hero-drop"></div>
           </div>
           <p class="hero-caption">
             <span class="t-zh">靜謐 · 文化 · 創造</span>
             <span class="t-en">Serenity · Culture · Creation</span>
-            <span class="t-ja">静寂 · 文化 · 創造</span><br>
-            Serein Studio – The flow of inspiration in serenity.
+            <span class="t-ja">静けさ · 文化 · クリエイション</span>
           </p>
         </div>
       </div>
     </section>
 
-    <!-- 首頁可以再放一兩個 summary 區塊（選擇性） -->
-    <section class="section">
+    <!-- ===== Section：三件專長 ===== -->
+    <section class="section section-alt">
       <div class="container">
-        <div class="section-heading center">
+        <div class="section-heading">
           <h2>
-            <span class="t-zh">我們在做的事</span>
-            <span class="t-en">What We Do</span>
-            <span class="t-ja">Serein のしごと</span>
+            <span class="t-zh">我們擅長的三件事</span>
+            <span class="t-en">What we love to build</span>
+            <span class="t-ja">得意な3つの領域</span>
           </h2>
           <p class="section-subtitle">
-            <span class="t-zh">用研究的紮實，做出溫柔但有力道的設計與企劃。</span>
-            <span class="t-en">Solid research, gentle but powerful design and planning.</span>
-            <span class="t-ja">リサーチの確かさと、やわらかくて芯のあるデザイン・企画。</span>
+            <span class="t-zh">
+              從個人創作者到地方品牌，幫你找到最合適的視覺語氣，
+              在柔和的節奏裡完成有重量的作品。
+            </span>
+            <span class="t-en">
+              From solo creators to local brands, we help you find a visual tone
+              that feels gentle yet solid, turning ideas into long-lasting work.
+            </span>
+            <span class="t-ja">
+              個人クリエイターからローカルブランドまで。
+              穏やかなムードの中で、しっかりとした存在感のあるビジュアルをつくります。
+            </span>
           </p>
+        </div>
+
+        <div class="cards-grid">
+          <!-- 卡片 1 -->
+          <article class="card">
+            <h3>
+              <span class="t-zh">VTuber・角色視覺設計</span>
+              <span class="t-en">VTuber & Character Design</span>
+              <span class="t-ja">VTuber・キャラクターデザイン</span>
+            </h3>
+            <p>
+              <span class="t-zh">
+                從人物世界觀、服裝造型到直播畫面氛圍，
+                一起把你腦中的角色整理成可長期經營的形象。
+              </span>
+              <span class="t-en">
+                From lore and outfits to streaming overlays, we help you shape a
+                character that feels coherent and ready for long-term growth.
+              </span>
+              <span class="t-ja">
+                設定や衣装、配信画面までトータルでデザインし、
+                「ずっと育てていけるキャラクター像」を一緒につくります。
+              </span>
+            </p>
+            <ul>
+              <li class="t-zh">VTuber 立繪與延伸造型企劃</li>
+              <li class="t-en">Live2D / VTuber visuals & outfit concepts</li>
+              <li class="t-ja">VTuber 立ち絵・衣装案・配信画面デザイン</li>
+            </ul>
+          </article>
+
+          <!-- 卡片 2 -->
+          <article class="card">
+            <h3>
+              <span class="t-zh">品牌視覺與版面系統</span>
+              <span class="t-en">Brand Visual & Layout System</span>
+              <span class="t-ja">ブランドビジュアル・レイアウト</span>
+            </h3>
+            <p>
+              <span class="t-zh">
+                Logo、色彩、排版到簡報與社群版型，讓品牌在不同場域都維持一致又有個性。
+              </span>
+              <span class="t-en">
+                Logos, colors, typography and templates for decks or social media
+                — a visual system that stays consistent but never boring.
+              </span>
+              <span class="t-ja">
+                ロゴ・カラー・フォント・資料テンプレートまで、
+                どの場面でも世界観がぶれないブランドビジュアルを設計します。
+              </span>
+            </p>
+            <ul>
+              <li class="t-zh">品牌識別小型手冊與提案簡報設計</li>
+              <li class="t-en">Mini brand guides & pitch deck design</li>
+              <li class="t-ja">ミニブランドガイド・プレゼン資料デザイン</li>
+            </ul>
+          </article>
+
+          <!-- 卡片 3 -->
+          <article class="card">
+            <h3>
+              <span class="t-zh">文化氣味的創意專案</span>
+              <span class="t-en">Culture-tinted Creative Projects</span>
+              <span class="t-ja">文化の香りをのせた企画</span>
+            </h3>
+            <p>
+              <span class="t-zh">
+                以地方故事、香水、婚紗概念、活動視覺等為靈感，
+                把生活裡的小細節轉成可以被收藏的作品。
+              </span>
+              <span class="t-en">
+                Drawing from local stories, fragrance concepts, wedding gowns or
+                event visuals, we turn everyday details into collectible pieces.
+              </span>
+              <span class="t-ja">
+                ローカルストーリーや香水コンセプト、ドレス案、イベントビジュアルなど、
+                日常のディテールを作品として形にします。
+              </span>
+            </p>
+            <ul>
+              <li class="t-zh">主題香水設計、婚紗視覺草圖、活動主視覺</li>
+              <li class="t-en">Signature perfume visuals, gown concepts, key visuals</li>
+              <li class="t-ja">香水・ドレス・イベントキービジュアル案</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Section：如何運用這間工作室 ===== -->
+    <section class="section">
+      <div class="container section-grid">
+        <div>
+          <div class="section-heading">
+            <h2>
+              <span class="t-zh">靜中生創 · Serein Studio</span>
+              <span class="t-en">Calm mind, vivid visuals</span>
+              <span class="t-ja">静かな心で、鮮やかなビジュアルを</span>
+            </h2>
+          </div>
+          <p>
+            <span class="t-zh">
+              這裡很適合作為你的「外掛創意部門」：可以是長期合作，
+              也可以是針對一個特別的企劃臨時組隊。討論的時候氣氛可以很放鬆，
+              作品完成時仍然保有提案與商業合作需要的份量。
+            </span>
+            <span class="t-en">
+              Think of Serein Studio as an add-on creative team you can plug in
+              when needed — for a long-term collab or a one-off project. The
+              process stays relaxed, while the final visuals stay presentation-
+              ready and professional.
+            </span>
+            <span class="t-ja">
+              セレインスタジオは、必要なときに呼び出せる
+              「外付けクリエイティブチーム」のような存在です。
+              打ち合わせの空気はゆるく、仕上がりはちゃんと提案・商業利用に耐えるクオリティで。
+            </span>
+          </p>
+
+          <ul>
+            <li class="t-zh">個人創作者／VTuber 想整理世界觀與視覺形象</li>
+            <li class="t-en">VTubers & creators who want a coherent visual world</li>
+            <li class="t-ja">VTuber・クリエイターとして世界観を整えたい人</li>
+
+            <li class="t-zh">小型品牌與地方店家需要溫柔但有記憶點的視覺</li>
+            <li class="t-en">
+              Small brands or local shops seeking gentle yet memorable visuals
+            </li>
+            <li class="t-ja">
+              やわらかく、でも記憶に残るビジュアルを求めるブランドやショップ
+            </li>
+
+            <li class="t-zh">活動主視覺、課程、企劃提案需要一套一致的畫面</li>
+            <li class="t-en">
+              Events, lectures or proposals that need a consistent visual set
+            </li>
+            <li class="t-ja">
+              イベント・講座・企画提案など、一式のビジュアルが必要な案件
+            </li>
+          </ul>
+
+          <div class="hero-actions" style="margin-top: 1.5rem;">
+            <a href="services.html" class="btn ghost">
+              <span class="t-zh">看所有服務</span>
+              <span class="t-en">See all services</span>
+              <span class="t-ja">サービス一覧へ</span>
+            </a>
+            <a href="workflow.html" class="btn ghost">
+              <span class="t-zh">了解合作流程</span>
+              <span class="t-en">How we work</span>
+              <span class="t-ja">進行の流れ</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- 精選作品卡片 -->
+        <div>
+          <div class="section-heading">
+            <h3>
+              <span class="t-zh">近期精選</span>
+              <span class="t-en">Highlights</span>
+              <span class="t-ja">ハイライト</span>
+            </h3>
+          </div>
+
+          <div class="cards-grid">
+            <article class="card">
+              <h3>
+                <span class="t-zh">VTuber 形象 × 香水視覺</span>
+                <span class="t-en">VTuber persona × perfume visuals</span>
+                <span class="t-ja">VTuberイメージ × 香水ビジュアル</span>
+              </h3>
+              <p>
+                <span class="t-zh">
+                  以角色個性與故事線為出發點，延伸出專屬香水瓶身與包裝設計，
+                  讓粉絲收藏的不只是周邊，而是一段情緒氣味。
+                </span>
+                <span class="t-en">
+                  Turning character traits into fragrance-inspired bottle and
+                  package designs, so fans can keep a piece of mood, not just merch.
+                </span>
+                <span class="t-ja">
+                  キャラクター性を香りのイメージに落とし込み、
+                  ボトルとパッケージデザインとして展開。グッズではなく「気配」を手元に残す企画。
+                </span>
+              </p>
+            </article>
+
+            <article class="card">
+              <h3>
+                <span class="t-zh">客製婚紗概念圖</span>
+                <span class="t-en">Custom wedding gown concepts</span>
+                <span class="t-ja">オーダーメイドドレス案</span>
+              </h3>
+              <p>
+                <span class="t-zh">
+                  以新人的故事與喜好為主軸，設計可拆解、可延伸的婚紗視覺草圖，
+                  日後也能成為插畫或紀念周邊的基礎。
+                </span>
+                <span class="t-en">
+                  Modular gown concepts based on the couple’s story and taste,
+                  which can later evolve into illustrations or keepsake goods.
+                </span>
+                <span class="t-ja">
+                  二人のエピソードや好みから、分解・アレンジしやすいドレス案を作成。
+                  後でイラストや記念グッズにも展開できるよう設計します。
+                </span>
+              </p>
+            </article>
+          </div>
+
+          <div class="hero-actions" style="margin-top: 1.2rem;">
+            <a href="portfolio.html" class="btn primary">
+              <span class="t-zh">更多作品</span>
+              <span class="t-en">More works</span>
+              <span class="t-ja">さらに見る</span>
+            </a>
+            <a href="projects.html" class="btn ghost">
+              <span class="t-zh">查看專案類型</span>
+              <span class="t-en">Browse project types</span>
+              <span class="t-ja">プロジェクト一覧</span>
+            </a>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- Footer（所有頁面都一樣） -->
+  <!-- ===== Footer ===== -->
   <footer class="site-footer">
     <div class="container footer-inner">
-      <span>© <span id="year"></span> Serein Studio · 瑟然工作室</span>
-      <span class="footer-note">The flow of inspiration in serenity.</span>
+      <div class="footer-note">
+        <span class="t-zh">© <span id="year"></span> Serein Studio 瑟然工作室</span>
+        <span class="t-en">© <span id="year"></span> Serein Studio</span>
+        <span class="t-ja">© <span id="year"></span> Serein Studio</span>
+      </div>
+      <div>
+        <a href="contact.html">
+          <span class="t-zh">合作與委託請來信或填寫表單</span>
+          <span class="t-en">For collaborations & commissions, reach out anytime.</span>
+          <span class="t-ja">ご依頼・コラボのご相談はお気軽に。</span>
+        </a>
+      </div>
     </div>
   </footer>
 
+  <!-- 重點：改成 js/main.js -->
   <script src="js/main.js"></script>
 </body>
 </html>

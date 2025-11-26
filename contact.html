@@ -1,384 +1,480 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="zh-Hant">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>聯絡我們｜Serein Studio 瑟然工作室</title>
-  <meta name="description" content="聯絡 Serein Studio 瑟然工作室，詢問委託、合作或課程工作坊相關問題。提供基本需求、預算與時程，我們會協助評估合適的合作方式。">
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="icon" href="favicon.ico" />
-</head>
-<body class="lang-zh">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Serein Studio 瑟然工作室｜聯絡與委託 Contact</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Serein Studio 聯絡與委託專用頁面：可填寫專案需求、預算區間、時程與聯絡方式，適用 VTuber 形象設計、品牌視覺、香水與婚紗企劃、課程合作等。"
+    />
+    <link rel="icon" href="images/工作室LOGO.png" type="image/png" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/main.js" defer></script>
+  </head>
 
-  <!-- Header -->
-  <header class="site-header">
-    <div class="container nav-container">
-      <div class="logo">
-        <span class="logo-mark">S</span>
-        <div class="logo-text">
-          <span class="logo-en">Serein Studio</span>
-          <span class="logo-zh">瑟然工作室</span>
-        </div>
-      </div>
-
-      <nav class="main-nav" id="mainNav">
-        <!-- 首頁 -->
-        <a href="index.html" class="nav-link">
-          <span class="t-zh">首頁</span>
-          <span class="t-en">Home</span>
-          <span class="t-ja">ホーム</span>
+  <body class="lang-zh">
+    <!-- ===== Header & Nav ===== -->
+    <header class="site-header">
+      <div class="container nav-container">
+        <a href="index.html" class="logo">
+          <div class="logo-mark">S</div>
+          <div class="logo-text">
+            <span class="logo-en">SEREIN STUDIO</span>
+            <span class="logo-zh t-zh">瑟然工作室</span>
+            <span class="logo-zh t-en">Serein Studio</span>
+            <span class="logo-zh t-ja">セレインスタジオ</span>
+          </div>
         </a>
 
-        <!-- 關於工作室 -->
-        <div class="nav-item has-sub">
-          <button type="button" class="nav-parent">
-            <span class="t-zh">關於工作室</span>
-            <span class="t-en">About Studio</span>
-            <span class="t-ja">スタジオについて</span>
-            <span class="nav-caret">▾</span>
-          </button>
-          <div class="nav-submenu">
-            <a href="about.html" class="nav-sub-link">
-              <span class="t-zh">關於瑟然</span>
-              <span class="t-en">About Serein</span>
-              <span class="t-ja">瑟然について</span>
-            </a>
-            <a href="team.html" class="nav-sub-link">
-              <span class="t-zh">工作室成員</span>
-              <span class="t-en">Team</span>
-              <span class="t-ja">メンバー</span>
-            </a>
-            <a href="partners.html" class="nav-sub-link">
-              <span class="t-zh">合作夥伴</span>
-              <span class="t-en">Partners</span>
-              <span class="t-ja">パートナー</span>
-            </a>
+        <nav id="mainNav" class="main-nav">
+          <a class="nav-link" href="index.html">
+            <span class="t-zh">首頁</span>
+            <span class="t-en">Home</span>
+            <span class="t-ja">ホーム</span>
+          </a>
+
+          <div class="nav-item has-sub">
+            <button class="nav-parent" type="button">
+              <span class="t-zh">關於工作室</span>
+              <span class="t-en">Studio</span>
+              <span class="t-ja">スタジオについて</span>
+              <span class="nav-caret">▾</span>
+            </button>
+            <div class="nav-submenu">
+              <a href="about.html" class="nav-sub-link">
+                <span class="t-zh">工作室簡介</span>
+                <span class="t-en">Studio Overview</span>
+                <span class="t-ja">スタジオ紹介</span>
+              </a>
+              <a href="team.html" class="nav-sub-link">
+                <span class="t-zh">核心成員</span>
+                <span class="t-en">Team</span>
+                <span class="t-ja">メンバー</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="nav-item has-sub">
+            <button class="nav-parent" type="button">
+              <span class="t-zh">服務內容</span>
+              <span class="t-en">Services</span>
+              <span class="t-ja">サービス</span>
+              <span class="nav-caret">▾</span>
+            </button>
+            <div class="nav-submenu">
+              <a href="services.html" class="nav-sub-link">
+                <span class="t-zh">服務總覽</span>
+                <span class="t-en">Service Overview</span>
+                <span class="t-ja">サービス一覧</span>
+              </a>
+              <a href="workflow.html" class="nav-sub-link">
+                <span class="t-zh">工作流程</span>
+                <span class="t-en">Workflow</span>
+                <span class="t-ja">ワークフロー</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="nav-item has-sub">
+            <button class="nav-parent" type="button">
+              <span class="t-zh">作品與專案</span>
+              <span class="t-en">Works</span>
+              <span class="t-ja">実績</span>
+              <span class="nav-caret">▾</span>
+            </button>
+            <div class="nav-submenu">
+              <a href="portfolio.html" class="nav-sub-link">
+                <span class="t-zh">作品集</span>
+                <span class="t-en">Portfolio</span>
+                <span class="t-ja">ポートフォリオ</span>
+              </a>
+              <a href="projects.html" class="nav-sub-link">
+                <span class="t-zh">專案與計畫</span>
+                <span class="t-en">Projects</span>
+                <span class="t-ja">プロジェクト</span>
+              </a>
+            </div>
+          </div>
+
+          <a class="nav-link" href="partners.html">
+            <span class="t-zh">合作夥伴</span>
+            <span class="t-en">Partners</span>
+            <span class="t-ja">パートナー</span>
+          </a>
+
+          <a class="nav-link" href="contact.html">
+            <span class="t-zh">聯絡我們</span>
+            <span class="t-en">Contact</span>
+            <span class="t-ja">お問い合わせ</span>
+          </a>
+        </nav>
+
+        <div id="langSwitch" class="lang-switch">
+          <button class="lang-btn" data-lang="zh">中</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+          <button class="lang-btn" data-lang="ja">日</button>
+        </div>
+
+        <button
+          id="navToggle"
+          class="nav-toggle"
+          type="button"
+          aria-label="Toggle navigation"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- ===== Main ===== -->
+    <main>
+      <!-- Hero -->
+      <section class="section section-alt">
+        <div class="container">
+          <div class="section-heading center">
+            <h1>
+              <span class="t-zh">聯絡與委託 Contact</span>
+              <span class="t-en">Contact &amp; commissions</span>
+              <span class="t-ja">お問い合わせ・ご依頼</span>
+            </h1>
+            <p class="section-subtitle">
+              <span class="t-zh">
+                不論是正式合作、還在試水溫的想法、或只是想問「這樣做可不可行」，都可以從這裡開始。
+              </span>
+              <span class="t-en">
+                Whether it’s a concrete commission or just a “would this work?”
+                idea, you can start the conversation here.
+              </span>
+              <span class="t-ja">
+                具体なご依頼はもちろん、「こういうことってできますか？」という相談ベースでも大丈夫です。
+              </span>
+            </p>
           </div>
         </div>
+      </section>
 
-        <!-- 服務內容 -->
-        <div class="nav-item has-sub">
-          <button type="button" class="nav-parent">
-            <span class="t-zh">服務內容</span>
-            <span class="t-en">Services</span>
-            <span class="t-ja">サービス</span>
-            <span class="nav-caret">▾</span>
-          </button>
-          <div class="nav-submenu">
-            <a href="services.html" class="nav-sub-link">
-              <span class="t-zh">服務總覽</span>
-              <span class="t-en">Overview</span>
-              <span class="t-ja">サービス一覧</span>
-            </a>
-            <a href="portfolio.html" class="nav-sub-link">
-              <span class="t-zh">作品集</span>
-              <span class="t-en">Portfolio</span>
-              <span class="t-ja">ポートフォリオ</span>
-            </a>
-            <a href="workflow.html" class="nav-sub-link">
-              <span class="t-zh">工作流程</span>
-              <span class="t-en">Workflow</span>
-              <span class="t-ja">ワークフロー</span>
-            </a>
-          </div>
-        </div>
-
-        <!-- 專案與計畫 -->
-        <a href="projects.html" class="nav-link">
-          <span class="t-zh">專案與計畫</span>
-          <span class="t-en">Projects</span>
-          <span class="t-ja">プロジェクト</span>
-        </a>
-
-        <!-- 聯絡我們 -->
-        <a href="contact.html" class="nav-link">
-          <span class="t-zh">聯絡我們</span>
-          <span class="t-en">Contact</span>
-          <span class="t-ja">お問い合わせ</span>
-        </a>
-      </nav>
-
-      <!-- 語言切換 -->
-      <div class="lang-switch" id="langSwitch">
-        <button class="lang-btn active" data-lang="zh">中</button>
-        <button class="lang-btn" data-lang="en">EN</button>
-        <button class="lang-btn" data-lang="ja">日</button>
-      </div>
-
-      <!-- 漢堡 -->
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </header>
-
-  <!-- Main -->
-  <main>
-    <!-- Hero -->
-    <section class="section section-alt">
-      <div class="container">
-        <div class="section-heading center">
-          <h2>
-            <span class="t-zh">聯絡瑟然工作室</span>
-            <span class="t-en">Contact Serein Studio</span>
-            <span class="t-ja">Serein Studio に連絡する</span>
-          </h2>
-          <p class="section-subtitle">
-            <span class="t-zh">
-              無論是小委託、長期合作，還是單純想問「這樣的案子可不可行」，<br>
-              都可以先丟個訊息，我們一起評估最適合的做法。
-            </span>
-            <span class="t-en">
-              Whether it’s a small commission, a longer project or just “is this idea feasible?”,<br>
-              feel free to reach out and we’ll figure out the best way together.
-            </span>
-            <span class="t-ja">
-              小さな依頼でも、長期プロジェクトでも、<br>
-              「こんな案件ってアリ？」という相談ベースでも大丈夫です。<br>
-              まずは一度メッセージを送ってください。
-            </span>
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact main -->
-    <section class="section">
-      <div class="container">
-        <div class="contact-grid">
-          <!-- 左邊：說明與聯絡資訊 -->
+      <!-- Contact grid -->
+      <section class="section">
+        <div class="container contact-grid">
+          <!-- Left: info -->
           <div class="contact-info">
             <h3>
-              <span class="t-zh">在填表單之前，可以先準備的資訊</span>
-              <span class="t-en">Helpful Info Before You Contact</span>
-              <span class="t-ja">お問い合わせ前にあると助かる情報</span>
+              <span class="t-zh">如何找到瑟然工作室</span>
+              <span class="t-en">How to reach Serein Studio</span>
+              <span class="t-ja">セレインスタジオへの連絡方法</span>
             </h3>
             <p>
               <span class="t-zh">
-                表單不是考試，不需要每一格都填到滿。但如果可以，<br>
-                建議至少先想一想以下幾點，會讓評估速度快很多：
+                表單適合整理完整需求，如果你只想先簡單打個招呼，也可以直接用信箱或社群帳號聯繫。
               </span>
               <span class="t-en">
-                This form isn’t an exam; you don’t have to fill every detail.<br>
-                But thinking about these points will help us respond more clearly:
+                The form is helpful for structured requests, but you’re also
+                welcome to reach out via email or socials for a quick first
+                contact.
               </span>
               <span class="t-ja">
-                テストではないので、すべて完璧に埋める必要はありません。<br>
-                ただ、次のポイントをある程度イメージしてもらえると、とても助かります：
+                しっかり相談したいときはフォームが便利ですが、まずはライトに話してみたい方はメールやSNSからでもOKです。
               </span>
             </p>
+
             <ul class="contact-hints">
-              <li>
-                <span class="t-zh">你目前的身分與用途（個人 Vtuber、校內報告、地方活動等）。</span>
-                <span class="t-en">Who you are and what this is for (Vtuber, school project, local event, etc.).</span>
-                <span class="t-ja">あなたの立場と用途（Vtuber・学校課題・地域イベント など）。</span>
+              <li class="t-zh">如果有參考圖、Moodboard 或歌單，也可以一起附上。</li>
+              <li class="t-zh">沒有預算概念也沒關係，可以填「還在抓範圍」。</li>
+
+              <li class="t-en">
+                You can share reference images, moodboards or playlists if you
+                have them.
               </li>
-              <li>
-                <span class="t-zh">預估的時程（大約什麼時候需要完成／上線）。</span>
-                <span class="t-en">Rough timeline (when you hope to use the final result).</span>
-                <span class="t-ja">だいたいのスケジュール（いつ頃使いたいか）。</span>
+              <li class="t-en">
+                If you don’t know your budget yet, just choose “still unsure”.
               </li>
-              <li>
-                <span class="t-zh">預算區間（可以是「1–3 萬內」「學生預算」這種等級）。</span>
-                <span class="t-en">Budget range (can be rough tiers like “student budget”, “up to N TWD”).</span>
-                <span class="t-ja">予算帯（「学生予算」「〜◯◯円くらいまで」などざっくりで OK）。</span>
+
+              <li class="t-ja">
+                参考画像・ムードボード・プレイリストなどがあればぜひ共有してください。
               </li>
-              <li>
-                <span class="t-zh">有沒有特別想合作的繪師／建模師／剪輯師等。</span>
-                <span class="t-en">Any preferred partners (illustrators, riggers, editors, etc.) if you have them.</span>
-                <span class="t-ja">一緒に仕事をしてほしい絵師さん・モデラーさん・編集者さんがいれば、その名前。</span>
+              <li class="t-ja">
+                予算感がまだ決まっていない場合は、「検討中」と記載いただければ大丈夫です。
               </li>
             </ul>
 
             <div class="contact-direct">
               <h4>
-                <span class="t-zh">其他聯絡方式</span>
-                <span class="t-en">Other Contact Options</span>
-                <span class="t-ja">他の連絡方法</span>
+                <span class="t-zh">直接聯繫</span>
+                <span class="t-en">Direct contact</span>
+                <span class="t-ja">ダイレクト連絡</span>
               </h4>
-              <p>
-                <span class="t-zh">
-                  目前預計使用信箱或社群私訊作為主要聯繫管道，<br>
-                  你也可以將案件簡述直接寄信給我們：
-                </span>
-                <span class="t-en">
-                  You can also send a short description via email or DM:<br>
-                  just include your name, project type and timeline.
-                </span>
-                <span class="t-ja">
-                  メールや SNS の DM からの相談も歓迎です。<br>
-                  お名前・案件の種類・スケジュールの目安を書いてもらえるとスムーズです。
-                </span>
+              <p class="contact-line">
+                <strong>Email：</strong>
+                <!-- 這裡改成你的信箱 -->
+                <a href="mailto:contact@sereinstudio.example">
+                  contact@sereinstudio.example
+                </a>
               </p>
               <p class="contact-line">
-                <span class="t-zh">電子郵件：</span>
-                <span class="t-en">Email:</span>
-                <span class="t-ja">メール：</span>
-                <!-- TODO: 換成你的實際信箱 -->
-                <a href="mailto:serein.studio@example.com">serein.studio@example.com</a>
+                <strong>Discord：</strong>
+                <!-- 這裡改成你的 DC Tag 或伺服器邀請 -->
+                <span>例：Server invite / 使用者名稱</span>
               </p>
-              <!-- 如果未來有 Discord / Twitter 就加在這裡 -->
+              <p class="contact-line">
+                <strong>其他：</strong>
+                <span class="t-zh">可於社群私訊後再移動到正式管道。</span>
+                <span class="t-en">
+                  We can move to email/Discord after a quick DM on socials.
+                </span>
+                <span class="t-ja">
+                  まずはSNSのDMから、必要に応じてメールやDiscordへ移行する形でも構いません。
+                </span>
+              </p>
             </div>
 
             <p class="contact-note">
               <span class="t-zh">
-                通常會在幾個工作天內回覆；若遇到比賽高峰期或學期末，回覆時間可能會稍微拉長，<br>
-                邀請你可以預留一點緩衝時間，一起讓合作保持在相對不爆炸的狀態。
+                一般會在 3～5 個工作天內回覆，如遇忙碌檔期（例如：大型活動前）可能會稍微延後。
               </span>
               <span class="t-en">
-                We usually reply within a few working days. During busy seasons (competitions, semester endings),<br>
-                replies may take longer — please allow some buffer so we can keep the process calm and steady.
+                Typically replies come within 3–5 business days. During busy
+                seasons (e.g. before big events), it might take a bit longer.
               </span>
               <span class="t-ja">
-                通常は数営業日以内に返信しますが、コンペ締切前や学期末などは少し時間がかかる場合があります。<br>
-                すこし余裕を持ってご相談いただけると、お互いあまり燃えずに進めやすくなります。
+                通常 3～5 営業日以内に返信いたしますが、繁忙期にはもう少しお時間をいただく場合があります。
               </span>
             </p>
           </div>
 
-          <!-- 右邊：表單 -->
+          <!-- Right: form -->
           <div class="contact-form-wrapper">
             <h3>
-              <span class="t-zh">聯絡表單</span>
-              <span class="t-en">Contact Form</span>
-              <span class="t-ja">お問い合わせフォーム</span>
+              <span class="t-zh">委託 / 合作需求表單</span>
+              <span class="t-en">Commission / collaboration form</span>
+              <span class="t-ja">ご依頼・コラボ用フォーム</span>
             </h3>
-
-            <!-- 目前先用 #，之後你可以換成表單服務的處理網址 -->
-            <form class="contact-form" action="#" method="post">
-              <div class="form-row">
+            <!-- 之後要串後端再把 action 換掉 -->
+            <form
+              class="contact-form"
+              action="#"
+              method="post"
+            >
+              <!-- 基本資訊 -->
+              <div class="form-row form-row-2col">
                 <div class="form-field">
                   <label for="name">
-                    <span class="t-zh">稱呼（必填）</span>
-                    <span class="t-en">Name (required)</span>
-                    <span class="t-ja">お名前（必須）</span>
+                    <span class="t-zh">稱呼</span>
+                    <span class="t-en">Name / handle</span>
+                    <span class="t-ja">お名前・ハンドルネーム</span>
                   </label>
-                  <input type="text" id="name" name="name" required />
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                    placeholder="例：Rosarin / 個人 VTuber"
+                  />
                 </div>
-              </div>
-
-              <div class="form-row">
                 <div class="form-field">
                   <label for="email">
-                    <span class="t-zh">聯絡 Email（必填）</span>
-                    <span class="t-en">Contact Email (required)</span>
-                    <span class="t-ja">メールアドレス（必須）</span>
+                    <span class="t-zh">聯絡 Email</span>
+                    <span class="t-en">Contact email</span>
+                    <span class="t-ja">メールアドレス</span>
                   </label>
-                  <input type="email" id="email" name="email" required />
-                </div>
-              </div>
-
-              <div class="form-row">
-                <div class="form-field">
-                  <label for="type">
-                    <span class="t-zh">詢問類型</span>
-                    <span class="t-en">Type of Inquiry</span>
-                    <span class="t-ja">相談の種類</span>
-                  </label>
-                  <select id="type" name="type">
-                    <option value="">
-                      <span class="t-zh">— 請選擇 —</span>
-                      <span class="t-en">— Please choose —</span>
-                      <span class="t-ja">— 選択してください —</span>
-                    </option>
-                    <option value="personal">
-                      個人委託（Vtuber／設計／剪輯等）
-                    </option>
-                    <option value="brand">
-                      品牌視覺／活動視覺設計
-                    </option>
-                    <option value="proposal">
-                      企劃提案／競賽／研究相關計畫
-                    </option>
-                    <option value="workshop">
-                      教學／工作坊／分享講座邀請
-                    </option>
-                    <option value="other">
-                      其他（先聊聊再一起釐清）
-                    </option>
-                  </select>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    placeholder="your@email.com"
+                  />
                 </div>
               </div>
 
               <div class="form-row form-row-2col">
                 <div class="form-field">
-                  <label for="budget">
-                    <span class="t-zh">預算區間（可概略）</span>
-                    <span class="t-en">Budget Range (rough)</span>
-                    <span class="t-ja">予算帯（ざっくりで OK）</span>
+                  <label for="contact-prefer">
+                    <span class="t-zh">偏好聯絡方式</span>
+                    <span class="t-en">Preferred contact</span>
+                    <span class="t-ja">連絡手段</span>
                   </label>
-                  <input type="text" id="budget" name="budget"
-                    placeholder="例如：學生預算／◯◯元以內" />
+                  <select id="contact-prefer" name="contact_prefer">
+                    <option value="email">Email</option>
+                    <option value="discord">Discord</option>
+                    <option value="social">
+                      <span class="t-zh">社群私訊</span>
+                      <span class="t-en">Social DM</span>
+                      <span class="t-ja">SNS DM</span>
+                    </option>
+                    <option value="other">
+                      <span class="t-zh">其他</span>
+                      <span class="t-en">Other</span>
+                      <span class="t-ja">その他</span>
+                    </option>
+                  </select>
+                </div>
+                <div class="form-field">
+                  <label for="social-id">
+                    <span class="t-zh">如非 Email，請留下帳號 / ID</span>
+                    <span class="t-en">If not email, your ID</span>
+                    <span class="t-ja">メール以外の場合の ID</span>
+                  </label>
+                  <input
+                    type="text"
+                    id="social-id"
+                    name="social_id"
+                    placeholder="例：Discord ID / X(舊Twitter) 帳號"
+                  />
+                </div>
+              </div>
+
+              <!-- 專案概況 -->
+              <div class="form-row">
+                <div class="form-field">
+                  <label for="project-type">
+                    <span class="t-zh">想進行的專案類型</span>
+                    <span class="t-en">Project type</span>
+                    <span class="t-ja">案件タイプ</span>
+                  </label>
+                  <select id="project-type" name="project_type" required>
+                    <option value="">
+                      — 請選擇 / Please select —
+                    </option>
+                    <option value="vtuber">
+                      <span class="t-zh">VTuber 角色 / 形象整合</span>
+                    </option>
+                    <option value="brand">
+                      <span class="t-zh">品牌 / 活動視覺</span>
+                    </option>
+                    <option value="perfume">
+                      <span class="t-zh">角色香水 / 主題香氛</span>
+                    </option>
+                    <option value="dress">
+                      <span class="t-zh">婚紗 / 人生節點視覺</span>
+                    </option>
+                    <option value="web">
+                      <span class="t-zh">網站 / 數位版面</span>
+                    </option>
+                    <option value="course">
+                      <span class="t-zh">課程 / 工作坊合作</span>
+                    </option>
+                    <option value="other">
+                      <span class="t-zh">其他 / 尚在發想</span>
+                    </option>
+                  </select>
+                  <p class="form-note">
+                    <span class="t-zh">若有多種可在下方補充說明。</span>
+                    <span class="t-en">
+                      If you need more than one, feel free to explain below.
+                    </span>
+                    <span class="t-ja">
+                      複数ある場合は、この下の詳細欄にご記入ください。
+                    </span>
+                  </p>
+                </div>
+              </div>
+
+              <!-- 預算與時程 -->
+              <div class="form-row form-row-2col">
+                <div class="form-field">
+                  <label for="budget">
+                    <span class="t-zh">預算區間（新台幣）</span>
+                    <span class="t-en">Budget range (TWD)</span>
+                    <span class="t-ja">予算目安（TWD）</span>
+                  </label>
+                  <select id="budget" name="budget">
+                    <option value="">
+                      <span class="t-zh">還在抓範圍 / Not sure yet</span>
+                    </option>
+                    <option value="under5k">NT$ 5,000 以下</option>
+                    <option value="5-10k">NT$ 5,000 – 10,000</option>
+                    <option value="10-30k">NT$ 10,000 – 30,000</option>
+                    <option value="30kplus">NT$ 30,000 以上</option>
+                  </select>
                 </div>
                 <div class="form-field">
                   <label for="timeline">
-                    <span class="t-zh">希望時程</span>
-                    <span class="t-en">Desired Timeline</span>
-                    <span class="t-ja">希望スケジュール</span>
+                    <span class="t-zh">期望完成時間</span>
+                    <span class="t-en">Preferred timeframe</span>
+                    <span class="t-ja">希望納期</span>
                   </label>
-                  <input type="text" id="timeline" name="timeline"
-                    placeholder="例如：希望◯月前完成" />
+                  <select id="timeline" name="timeline">
+                    <option value="">
+                      <span class="t-zh">彈性，可協調</span>
+                    </option>
+                    <option value="1month">
+                      <span class="t-zh">一個月內</span>
+                    </option>
+                    <option value="1-3months">
+                      <span class="t-zh">一～三個月</span>
+                    </option>
+                    <option value="3plus">
+                      <span class="t-zh">三個月以上・長期規劃</span>
+                    </option>
+                  </select>
                 </div>
               </div>
 
+              <!-- 詳細說明 -->
               <div class="form-row">
                 <div class="form-field">
                   <label for="details">
-                    <span class="t-zh">案件說明（越具體越好）</span>
-                    <span class="t-en">Project Details</span>
-                    <span class="t-ja">案件の内容</span>
+                    <span class="t-zh">想跟我們說的事情</span>
+                    <span class="t-en">Tell us about your idea</span>
+                    <span class="t-ja">ご希望・アイデア詳細</span>
                   </label>
-                  <textarea id="details" name="details" rows="6"
-                    placeholder="可以簡單說明你目前的狀況、想做的東西、參考風格連結等。"></textarea>
+                  <textarea
+                    id="details"
+                    name="details"
+                    rows="6"
+                    required
+                    placeholder="可以簡單寫下：希望的風格、使用場域（直播、活動、禮物等）、是否有喜歡的參考作品…"
+                  ></textarea>
                 </div>
               </div>
 
+              <!-- 備註 -->
               <div class="form-row">
                 <div class="form-field">
-                  <label for="ref">
-                    <span class="t-zh">如果是他人介紹，請寫介紹人（選填）</span>
-                    <span class="t-en">Referred by (optional)</span>
-                    <span class="t-ja">紹介者（任意）</span>
+                  <label for="notes">
+                    <span class="t-zh">其他備註（選填）</span>
+                    <span class="t-en">Other notes (optional)</span>
+                    <span class="t-ja">その他（任意）</span>
                   </label>
-                  <input type="text" id="ref" name="ref" />
+                  <textarea
+                    id="notes"
+                    name="notes"
+                    rows="3"
+                    placeholder="例如：可聯絡時段、是否趕件、是否方便語音會議等等。"
+                  ></textarea>
                 </div>
               </div>
-
-              <p class="form-note">
-                <span class="t-zh">
-                  送出表單代表你同意將上述內容提供給瑟然工作室作為案件評估參考。<br>
-                  若內容較敏感或涉及研究資料，也可以僅先描述大致方向，細節改以後續通話／會議補充。
-                </span>
-                <span class="t-en">
-                  By submitting, you agree to share this information with Serein Studio for project evaluation.<br>
-                  If your project involves sensitive data or research, you may describe it in general terms first and share details later in a call/meeting.
-                </span>
-                <span class="t-ja">
-                  フォーム送信により、記入内容を案件検討のために Serein Studio が確認することに同意したものとみなされます。<br>
-                  センシティブな研究データなどが含まれる場合は、最初は概要レベルの説明にとどめ、詳細は通話やミーティングで共有していただいて構いません。
-                </span>
-              </p>
 
               <button type="submit" class="btn primary full-width">
                 <span class="t-zh">送出表單</span>
                 <span class="t-en">Submit</span>
-                <span class="t-ja">送信</span>
+                <span class="t-ja">送信する</span>
               </button>
             </form>
           </div>
         </div>
+      </section>
+    </main>
+
+    <!-- ===== Footer ===== -->
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-note">
+          <span class="t-zh">© <span id="year"></span> Serein Studio 瑟然工作室</span>
+          <span class="t-en">© <span id="year"></span> Serein Studio</span>
+          <span class="t-ja">© <span id="year"></span> Serein Studio</span>
+        </div>
+        <div>
+          <span class="t-zh">謝謝你把腦中的世界交給我們一起照顧。</span>
+          <span class="t-en">
+            Thanks for trusting us with the world in your head.
+          </span>
+          <span class="t-ja">
+            あなたの頭の中の世界を、一緒にかたちにさせてくれてありがとう。
+          </span>
+        </div>
       </div>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <span>© <span id="year"></span> Serein Studio · 瑟然工作室</span>
-      <span class="footer-note">The flow of inspiration in serenity.</span>
-    </div>
-  </footer>
-
-  <script src="js/main.js"></script>
-</body>
+    </footer>
+  </body>
 </html>
