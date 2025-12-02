@@ -112,3 +112,14 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+// VTuber page：角色介紹摺頁
+const vtuberToggles = document.querySelectorAll(".vtuber-toggle");
+
+vtuberToggles.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const card = btn.closest(".vtuber-card");
+    if (!card) return;
+    card.classList.toggle("expanded");
+  });
+});
