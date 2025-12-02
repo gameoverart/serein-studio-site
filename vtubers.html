@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, viewport-fit=cover"
+  />
+  <title>常駐 VTuber 角色介紹｜Serein Studio 瑟然文創影像工作室</title>
+
+  <link rel="icon" href="images/工作室LOGO.png" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="lang-zh">
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <div class="logo-mark">S</div>
+        <div class="logo-text">
+          <span class="logo-en">SEREIN STUDIO</span>
+          <span class="logo-zh t-zh">瑟然文創影像工作室</span>
+          <span class="logo-zh t-en">Serein Creative Studio</span>
+          <span class="logo-zh t-ja">セレインクリエイティブスタジオ</span>
+        </div>
+      </a>
+
+      <nav id="mainNav" class="main-nav">
+        <!-- 首頁 -->
+        <a class="nav-link" href="index.html">
+          <span class="t-zh">首頁</span>
+          <span class="t-en">Home</span>
+          <span class="t-ja">ホーム</span>
+        </a>
+
+        <!-- 關於工作室：簡介 / 成員 / VTuber / 合作夥伴 -->
+        <div class="nav-item has-sub">
+          <button class="nav-parent" type="button">
+            <span class="t-zh">關於工作室</span>
+            <span class="t-en">Studio</span>
+            <span class="t-ja">スタジオについて</span>
+            <span class="nav-caret">▾</span>
+          </button>
+          <div class="nav-submenu">
+            <a href="about.html" class="nav-sub-link">
+              <span class="t-zh">工作室簡介</span>
+              <span class="t-en">Studio Overview</span>
+              <span class="t-ja">スタジオ紹介</span>
+            </a>
+            <a href="team.html" class="nav-sub-link">
+              <span class="t-zh">核心成員</span>
+              <span class="t-en">Team</span>
+              <span class="t-ja">メンバー</span>
+            </a>
+            <a href="vtubers.html" class="nav-sub-link">
+              <span class="t-zh">常駐 VTuber</span>
+              <span class="t-en">Resident VTuber</span>
+              <span class="t-ja">常駐VTuber</span>
+            </a>
+            <a href="partners.html" class="nav-sub-link">
+              <span class="t-zh">合作夥伴</span>
+              <span class="t-en">Partners</span>
+              <span class="t-ja">パートナー</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- 服務內容 -->
+        <div class="nav-item has-sub">
+          <button class="nav-parent" type="button">
+            <span class="t-zh">服務內容</span>
+            <span class="t-en">Services</span>
+            <span class="t-ja">サービス</span>
+            <span class="nav-caret">▾</span>
+          </button>
+          <div class="nav-submenu">
+            <a href="services.html" class="nav-sub-link">
+              <span class="t-zh">服務總覽</span>
+              <span class="t-en">Service Overview</span>
+              <span class="t-ja">サービス一覧</span>
+            </a>
+            <a href="workflow.html" class="nav-sub-link">
+              <span class="t-zh">工作流程</span>
+              <span class="t-en">Workflow</span>
+              <span class="t-ja">ワークフロー</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- 作品與專案 -->
+        <div class="nav-item has-sub">
+          <button class="nav-parent" type="button">
+            <span class="t-zh">作品與專案</span>
+            <span class="t-en">Works</span>
+            <span class="t-ja">実績</span>
+            <span class="nav-caret">▾</span>
+          </button>
+          <div class="nav-submenu">
+            <a href="portfolio.html" class="nav-sub-link">
+              <span class="t-zh">作品集</span>
+              <span class="t-en">Portfolio</span>
+              <span class="t-ja">ポートフォリオ</span>
+            </a>
+            <a href="projects.html" class="nav-sub-link">
+              <span class="t-zh">專案與計畫</span>
+              <span class="t-en">Projects</span>
+              <span class="t-ja">プロジェクト</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- 聯絡我們 -->
+        <a class="nav-link" href="contact.html">
+          <span class="t-zh">聯絡我們</span>
+          <span class="t-en">Contact</span>
+          <span class="t-ja">お問い合わせ</span>
+        </a>
+      </nav>
+
+      <!-- 語言切換 -->
+      <div id="langSwitch" class="lang-switch">
+        <button class="lang-btn" data-lang="zh">中</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="ja">日</button>
+      </div>
+
+      <!-- 漢堡選單 -->
+      <button id="navToggle" class="nav-toggle" type="button">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero：大圖＋角色介紹 -->
+    <section class="vt-hero">
+      <div class="vt-hero-bg"></div>
+      <div class="container vt-hero-inner">
+        <!-- 右側角色圖：之後換成妳自己的 PNG/JPG -->
+        <div class="vt-hero-visual">
+          <div class="vt-hero-blob"></div>
+          <figure class="vt-hero-illust">
+            <!-- TODO: 換成實際角色圖 -->
+            <img src="images/瑟莎琳.jpg" alt="示意：夜幕系魔界女王 VTuber 角色立繪" />
+          </figure>
+        </div>
+
+        <!-- 左側文字 -->
+        <div class="vt-hero-text">
+          <p class="vt-hero-eyebrow t-zh">常駐 VTuber 角色介紹</p>
+          <p class="vt-hero-eyebrow t-en">Resident VTuber lineup</p>
+          <p class="vt-hero-eyebrow t-ja">常駐VTuberキャラクター</p>
+
+          <h1 class="vt-hero-title">
+            <span class="t-zh">（示意）夜幕系魔界女王 VTuber</span>
+            <span class="t-en">Dusk Queen of the Demon Realm</span>
+            <span class="t-ja">夜に揺れる魔界の女王VTuber</span>
+          </h1>
+
+          <p class="vt-hero-sub t-zh">
+            以「墜入人界的魔界女王」為核心設定，風格偏優雅、帶點毒舌與職人感，
+            適合偏劇情、氣氛營造與世界觀延伸合作。
+          </p>
+          <p class="vt-hero-sub t-en">
+            A poised yet sharp demon queen concept, perfect for story-driven
+            streams, atmosphere-heavy visuals and worldbuilding collabs.
+          </p>
+          <p class="vt-hero-sub t-ja">
+            「人間界に降り立った魔界の女王」を軸にしたキャラクター。
+            落ち着いた雰囲気の中に、少し毒舌とプロ意識が光るタイプです。
+          </p>
+
+          <div class="vt-chip-row">
+            <span class="vt-chip t-zh">Lore heavy</span>
+            <span class="vt-chip t-zh">Chill talk</span>
+            <span class="vt-chip t-zh">歌回／朗讀／企劃聯動</span>
+          </div>
+
+          <div class="vt-social-row">
+            <!-- 把 # 換成實際連結 -->
+            <a href="#" class="vt-social-btn" aria-label="YouTube">
+              <span>YT</span>
+            </a>
+            <a href="#" class="vt-social-btn" aria-label="Twitch">
+              <span>Tw</span>
+            </a>
+            <a href="#" class="vt-social-btn" aria-label="X / Twitter">
+              <span>X</span>
+            </a>
+            <a href="#" class="vt-social-btn" aria-label="Discord">
+              <span>Dc</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 角色摺頁：世界觀與設定 -->
+    <section class="section vt-section">
+      <div class="container">
+        <div class="section-heading">
+          <h2>
+            <span class="t-zh">角色與世界觀設定</span>
+            <span class="t-en">Characters & worldbuilding</span>
+            <span class="t-ja">キャラクター・世界観設定</span>
+          </h2>
+          <p class="section-subtitle">
+            <span class="t-zh">
+              這裡整理常駐角色的基礎資料與世界觀，方便合作方快速確認定位、語氣與出場場合。
+            </span>
+            <span class="t-en">
+              A quick overview of resident characters and their worlds, so you
+              can easily match tone, role and scenes for collaboration.
+            </span>
+          </p>
+        </div>
+
+        <div class="vt-accordion">
+          <!-- 角色 1 -->
+          <details class="vt-accordion-item" open>
+            <summary class="vt-accordion-header">
+              <div>
+                <p class="vt-acc-name t-zh">（示意）夜幕系魔界女王</p>
+                <p class="vt-acc-name t-en">Dusk Queen of the Demon Realm</p>
+              </div>
+              <div class="vt-acc-tags">
+                <span class="vt-chip t-zh">主頻道常駐</span>
+                <span class="vt-chip t-zh">中長篇企劃向</span>
+              </div>
+            </summary>
+            <div class="vt-accordion-body">
+              <p class="t-zh">
+                出身自搖搖欲墜的魔界王權，因意外跌入人界後，開始以「直播」作為觀察人類世界的方式。
+                表面上是冷靜穩重的女王，實際上對人類文化充滿好奇，偶爾會不小心被人間的小事逗笑。
+              </p>
+              <ul class="vt-acc-list">
+                <li class="t-zh">適合合作類型：劇情向直播、世界觀聯動、品牌世界觀客製企劃。</li>
+                <li class="t-zh">不太適合：完全無設定、純吵鬧綜藝感為主的場合。</li>
+              </ul>
+            </div>
+          </details>
+
+          <!-- 角色 2（示意，可之後換成諾亞） -->
+          <details class="vt-accordion-item">
+            <summary class="vt-accordion-header">
+              <div>
+                <p class="vt-acc-name t-zh">（示意）森林系獸人王 VTuber</p>
+                <p class="vt-acc-name t-en">Beast King from the Forest</p>
+              </div>
+              <div class="vt-acc-tags">
+                <span class="vt-chip t-zh">偏暖男路線</span>
+                <span class="vt-chip t-zh">聊天／教學向</span>
+              </div>
+            </summary>
+            <div class="vt-accordion-body">
+              <p class="t-zh">
+                曾經被放逐、在密林裡自立生存的獸人王。外表有點不好親近，但其實非常會照顧人，擅長把複雜的概念拆解成聽得懂的故事。
+              </p>
+              <ul class="vt-acc-list">
+                <li class="t-zh">適合合作類型：教學企劃、座談會、品牌導覽或導覽員角色。</li>
+                <li class="t-zh">不太適合：需要過度毒舌或強烈黑暗感的合作。</li>
+              </ul>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- 代表影片區 -->
+    <section class="vt-section vt-section-band">
+      <div class="container">
+        <div class="section-heading center">
+          <h2>
+            <span class="t-zh">代表影片與精華</span>
+            <span class="t-en">Highlight clips & streams</span>
+            <span class="t-ja">代表動画・ハイライト</span>
+          </h2>
+          <p class="section-subtitle">
+            <span class="t-zh">
+              這裡可以放上實際合作或代表性直播的影片連結，方便合作方快速抓到頻道的節奏與呈現方式。
+            </span>
+            <span class="t-en">
+              Embed your key VODs, collabs or MV-style videos here to showcase
+              tone, pacing and on-screen presence.
+            </span>
+          </p>
+        </div>
+
+        <div class="vt-video-grid">
+          <!-- 把 VIDEO_ID_x 換成自己的 YouTube 影片 ID -->
+          <article class="vt-video-card">
+            <div class="vt-video-frame">
+              <iframe
+                src="https://www.youtube.com/embed/VIDEO_ID_1"
+                title="Sample highlight"
+                frameborder="0"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <h3 class="vt-video-title t-zh">示意｜歌回精華</h3>
+            <p class="vt-video-meta t-zh">歌回・氣氛營造向</p>
+          </article>
+
+          <article class="vt-video-card">
+            <div class="vt-video-frame">
+              <iframe
+                src="https://www.youtube.com/embed/VIDEO_ID_2"
+                title="Sample talk stream"
+                frameborder="0"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <h3 class="vt-video-title t-zh">示意｜深夜閒聊回</h3>
+            <p class="vt-video-meta t-zh">聊天・角色互動向</p>
+          </article>
+
+          <article class="vt-video-card">
+            <div class="vt-video-frame">
+              <iframe
+                src="https://www.youtube.com/embed/VIDEO_ID_3"
+                title="Sample collab"
+                frameborder="0"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <h3 class="vt-video-title t-zh">示意｜合作企劃精華</h3>
+            <p class="vt-video-meta t-zh">聯動・品牌合作向</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-note">
+        © <span id="year"></span> Serein Studio 瑟然文創影像工作室
+      </div>
+      <div class="footer-note">
+        <span class="t-zh">靜謐中的靈感流動。</span>
+        <span class="t-en">The flow of inspiration in serenity.</span>
+        <span class="t-ja">静けさの中で流れるインスピレーション。</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
